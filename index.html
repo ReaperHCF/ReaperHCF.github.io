@@ -1,1543 +1,476 @@
 
-<!DOCTYPE html>
-<html id="XF" lang="en-US" dir="LTR" data-app="public" data-template="forum_list" data-container-key="" data-content-key="" data-logged-in="false" data-cookie-prefix="xf_" class="has-no-js template-forum_list">
-<head>
+<!doctype html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:website="http://ogp.me/ns/website" lang="en-US" itemscope itemtype="http://schema.org/WebPage"  >
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1">
+
+    <!-- This is Squarespace. --><!-- reapermc -->
+<base href="">
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Skycade Forums</title>
-<meta name="description" content="The Skycade Forums" />
-<meta property="og:description" content="The Skycade Forums" />
-<meta property="twitter:description" content="The Skycade Forums" />
-<link rel="canonical" href="https://skycade.net/" />
-<link rel="alternate" type="application/rss+xml" title="RSS feed for Skycade Forums" href="/forums/-/index.rss" />
-<meta property="og:site_name" content="Skycade Forums" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Skycade Forums" />
-<meta property="twitter:title" content="Skycade Forums" />
-<meta property="og:url" content="https://skycade.net/" />
-<meta name="theme-color" content="#2980b9" />
-<link rel="preload" href="/styles/fonts/fa/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin="anonymous" />
-<link rel="stylesheet" href="/css.php?css=public%3Anormalize.css%2Cpublic%3Acore.less%2Cpublic%3Aapp.less%2Cpublic%3Afont_awesome.css&amp;s=3&amp;l=1&amp;d=1543961368&amp;k=f242d511083a52c81c39c0e88165cf6b5ec53683" />
-<link rel="stylesheet" href="/css.php?css=public%3Anode_list.less%2Cpublic%3Anotices.less%2Cpublic%3Areme_core.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Aextra.less&amp;s=3&amp;l=1&amp;d=1543961368&amp;k=d215c55245c577b69127315b6e3573972162887a" />
-<link href='//fonts.googleapis.com/css?family=Nunito:400,600,700' rel='stylesheet' type='text/css'>
-<script src="/js/xf/preamble-compiled.js?_v=4bdbb8c2" type="90f76c5b6578e03f6488201b-text/javascript"></script>
-<link rel="icon" type="image/png" href="https://i.imgur.com/HfshAjO.png" sizes="32x32" />
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106514558-1" type="90f76c5b6578e03f6488201b-text/javascript"></script>
-<script type="90f76c5b6578e03f6488201b-text/javascript">
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-106514558-1', {
-			// 
-			
-			
-		});
-	</script>
-</head>
-<body data-template="forum_list">
-<div class="p-pageWrapper" id="top">
-<div class="p-staffBar">
-<div class="p-staffBar-inner">
-<div class="p-nav-opposite">
-<div class="p-navgroup p-account p-navgroup--guest">
-<a href="/login/" class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--logIn" rel="nofollow" data-xf-click="overlay" data-follow-redirects="on">
-<i aria-hidden="true"></i>
-<span class="p-navgroup-linkText">Log in</span>
-</a>
-<div class="menu menu--structural menu--medium" data-menu="menu" aria-hidden="true" data-href="/login/"></div>
-<a href="/register/" class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--register" rel="nofollow" data-xf-click="overlay" data-follow-redirects="on">
-<i aria-hidden="true"></i>
-<span class="p-navgroup-linkText">Register</span>
-</a>
-</div>
-<div class="p-navgroup p-discovery">
-<a href="/whats-new/" class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew" title="What&#039;s new">
-<i aria-hidden="true"></i>
-<span class="p-navgroup-linkText">What's new</span>
-</a>
-<a href="/search/" class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search" data-xf-click="menu" data-xf-key="/" aria-label="Search" aria-expanded="false" aria-haspopup="true" title="Search">
-<i aria-hidden="true"></i>
-<span class="p-navgroup-linkText">Search</span>
-</a>
-<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
-<form action="/search/search" method="post" class="menu-content" data-xf-init="quick-search">
-<h3 class="menu-header">Search</h3>
-<div class="menu-row">
-<input type="text" class="input" name="keywords" placeholder="Search…" aria-label="Search" data-menu-autofocus="true" />
-</div>
-<div class="menu-row">
-<label class="iconic iconic--checkbox iconic--labelled"><input type="checkbox" name="c[title_only]" value="1" /><i aria-hidden="true"></i>Search titles only</label>
-</div>
-<div class="menu-row">
-<div class="inputGroup">
-<span class="inputGroup-text" id="ctrl_search_menu_by_member">By:</span>
-<input class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Member" aria-labelledby="ctrl_search_menu_by_member" />
-</div>
-</div>
-<div class="menu-footer">
-<span class="menu-footer-controls">
-<button type="submit" class="button--primary button button--icon button--icon--search"><span class="button-text">Search</span></button>
-<a href="/search/" class="button" rel="nofollow"><span class="button-text">Advanced search…</span></a>
-</span>
-</div>
-<input type="hidden" name="_xfToken" value="1544830003,1f2938343cc74863f97d9a32105d9f5d" />
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-<header class="p-header p-navSticky p-navSticky--primary" data-xf-init="sticky-header" id="header">
-<div class="p-header-inner">
-<div class="p-header-content">
-<div class="p-header-logo p-header-logo--text">
-<a href="https://skycade.net">
-Skycade Forums
-</a>
-</div>
-<nav class="p-nav">
-<div class="p-nav-inner">
-<a class="p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" role="button" tabindex="0">
-<i aria-hidden="true"></i>
-<span class="p-nav-menuText">Menu</span>
-</a>
-<div class="p-nav-smallLogo">
-<a href="https://skycade.net">
-<img src="https://i.imgur.com/ASIHJUU.png" alt="Skycade Forums" srcset="https://i.imgur.com/ASIHJUU.png 2x" />
-</a>
-</div>
-<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
-<div class="hScroller-scroll">
-<ul class="p-nav-list js-offCanvasNavSource">
-<li>
-<div class="p-navEl ">
-<a href="https://skycade.net" class="p-navEl-link " data-xf-key="1" data-nav-id="home">Home</a>
-</div>
-</li>
-<li>
-<div class="p-navEl is-selected" data-has-children="true">
-<a href="/" class="p-navEl-link p-navEl-link--splitMenu " data-nav-id="forums">Forums</a>
-<a data-xf-key="2" data-xf-click="menu" data-menu-pos-ref="< .p-navEl" data-arrow-pos-ref="< .p-navEl" class="p-navEl-splitTrigger" role="button" tabindex="0" aria-label="Toggle expanded" aria-expanded="false" aria-haspopup="true"></a>
-<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
-<div class="menu-content">
+<title>ReaperHCF</title>
+<link rel="shortcut icon" type="image/x-icon" href="https://static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c0dbe1b352f5317ebe551db/favicon.ico"/>
+<link rel="canonical" href="https://reapermc.squarespace.com/"/>
+<meta property="og:site_name" content="ReaperHCF"/>
+<meta property="og:title" content="ReaperHCF"/>
+<meta property="og:url" content="https://reapermc.squarespace.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="http://static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c0dbe240ebbe8549dbaf5fc/1544404522367/HelloTrans.png?format=1500w"/>
+<meta property="og:image:width" content="800"/>
+<meta property="og:image:height" content="800"/>
+<meta itemprop="name" content="ReaperHCF"/>
+<meta itemprop="url" content="https://reapermc.squarespace.com/"/>
+<meta itemprop="thumbnailUrl" content="http://static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c0dbe240ebbe8549dbaf5fc/1544404522367/HelloTrans.png?format=1500w"/>
+<link rel="image_src" href="http://static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c0dbe240ebbe8549dbaf5fc/1544404522367/HelloTrans.png?format=1500w" />
+<meta itemprop="image" content="http://static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c0dbe240ebbe8549dbaf5fc/1544404522367/HelloTrans.png?format=1500w"/>
+<meta name="twitter:title" content="ReaperHCF"/>
+<meta name="twitter:image" content="http://static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c0dbe240ebbe8549dbaf5fc/1544404522367/HelloTrans.png?format=1500w"/>
+<meta name="twitter:url" content="https://reapermc.squarespace.com/"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dosis:600,400,700,300,800,500|Roboto:400,700,700i,300i,300"/>
+<script type="text/javascript">SQUARESPACE_ROLLUPS = {};</script>
+<script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//static.squarespace.com/universal/scripts-compressed/common-80ac7b739b1eace3253b-min.en-US.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-common');</script>
+<script crossorigin="anonymous" src="//static.squarespace.com/universal/scripts-compressed/common-80ac7b739b1eace3253b-min.en-US.js" ></script><script crossorigin="anonymous" src="//static.squarespace.com/universal/scripts-compressed/performance-4965a8b08e6075b63d4c-min.en-US.js" defer ></script><script data-name="static-context">Static = window.Static || {}; Static.SQUARESPACE_CONTEXT = {"facebookAppId":"314192535267336","rollups":{"squarespace-announcement-bar":{"css":"//static.squarespace.com/universal/styles-compressed/announcement-bar-d41d8cd98f00b204e9800998ecf8427e-min.css","js":"//static.squarespace.com/universal/scripts-compressed/announcement-bar-92832b3a0781b42b3cff-min.en-US.js"},"squarespace-audio-player":{"css":"//static.squarespace.com/universal/styles-compressed/audio-player-a57b8f3aa31918104f57a068648fbc63-min.css","js":"//static.squarespace.com/universal/scripts-compressed/audio-player-13d164a92b6d43cfb8eb-min.en-US.js"},"squarespace-blog-collection-list":{"css":"//static.squarespace.com/universal/styles-compressed/blog-collection-list-d41d8cd98f00b204e9800998ecf8427e-min.css","js":"//static.squarespace.com/universal/scripts-compressed/blog-collection-list-c1d5ef1f6f68c15baeb5-min.en-US.js"},"squarespace-calendar-block-renderer":{"css":"//static.squarespace.com/universal/styles-compressed/calendar-block-renderer-61a327b8527a1fbf9b1fe569505ed5ae-min.css","js":"//static.squarespace.com/universal/scripts-compressed/calendar-block-renderer-1a79e3b7a4b75a9ab7c8-min.en-US.js"},"squarespace-chartjs-helpers":{"css":"//static.squarespace.com/universal/styles-compressed/chartjs-helpers-9935a41d63cf08ca108505d288c1712e-min.css","js":"//static.squarespace.com/universal/scripts-compressed/chartjs-helpers-09d2938ea015858485cb-min.en-US.js"},"squarespace-comments":{"css":"//static.squarespace.com/universal/styles-compressed/comments-bfcda0f17dd987db5206c1d15e83fd19-min.css","js":"//static.squarespace.com/universal/scripts-compressed/comments-143a70c6472a168b7098-min.en-US.js"},"squarespace-commerce-cart":{"js":"//static.squarespace.com/universal/scripts-compressed/commerce-cart-59d02fc23ba0090c629c-min.en-US.js"},"squarespace-dialog":{"css":"//static.squarespace.com/universal/styles-compressed/dialog-b548cc83dd846f17dd31de0760e67bc5-min.css","js":"//static.squarespace.com/universal/scripts-compressed/dialog-ee154432d844058c914b-min.en-US.js"},"squarespace-events-collection":{"css":"//static.squarespace.com/universal/styles-compressed/events-collection-61a327b8527a1fbf9b1fe569505ed5ae-min.css","js":"//static.squarespace.com/universal/scripts-compressed/events-collection-080883c998b0ae47fe25-min.en-US.js"},"squarespace-form-rendering-utils":{"js":"//static.squarespace.com/universal/scripts-compressed/form-rendering-utils-6865cd427dcf915dc677-min.en-US.js"},"squarespace-forms":{"css":"//static.squarespace.com/universal/styles-compressed/forms-ac7917c174031c937e3df4b3a2005b34-min.css","js":"//static.squarespace.com/universal/scripts-compressed/forms-1329f735a080a18149a7-min.en-US.js"},"squarespace-gallery-collection-list":{"css":"//static.squarespace.com/universal/styles-compressed/gallery-collection-list-d41d8cd98f00b204e9800998ecf8427e-min.css","js":"//static.squarespace.com/universal/scripts-compressed/gallery-collection-list-733753ad7e10da2cf6ee-min.en-US.js"},"squarespace-image-zoom":{"css":"//static.squarespace.com/universal/styles-compressed/image-zoom-72b0ab7796582588032aa6472e2e2f14-min.css","js":"//static.squarespace.com/universal/scripts-compressed/image-zoom-0496d8c5b1de212ebc2a-min.en-US.js"},"squarespace-pinterest":{"css":"//static.squarespace.com/universal/styles-compressed/pinterest-d41d8cd98f00b204e9800998ecf8427e-min.css","js":"//static.squarespace.com/universal/scripts-compressed/pinterest-df65cd46358865679013-min.en-US.js"},"squarespace-popup-overlay":{"css":"//static.squarespace.com/universal/styles-compressed/popup-overlay-7b48efeab9b323dfdb524a256cf61595-min.css","js":"//static.squarespace.com/universal/scripts-compressed/popup-overlay-6c6da96fc772f0a92c97-min.en-US.js"},"squarespace-product-quick-view":{"css":"//static.squarespace.com/universal/styles-compressed/product-quick-view-bc8694b75a40e4bd969b662b80ebafb5-min.css","js":"//static.squarespace.com/universal/scripts-compressed/product-quick-view-92d636e65a4f8d72f269-min.en-US.js"},"squarespace-products-collection-item-v2":{"css":"//static.squarespace.com/universal/styles-compressed/products-collection-item-v2-72b0ab7796582588032aa6472e2e2f14-min.css","js":"//static.squarespace.com/universal/scripts-compressed/products-collection-item-v2-da4d3e5035fa5c2c915a-min.en-US.js"},"squarespace-products-collection-list-v2":{"css":"//static.squarespace.com/universal/styles-compressed/products-collection-list-v2-72b0ab7796582588032aa6472e2e2f14-min.css","js":"//static.squarespace.com/universal/scripts-compressed/products-collection-list-v2-3f431f9b4cc6938fdb27-min.en-US.js"},"squarespace-search-page":{"css":"//static.squarespace.com/universal/styles-compressed/search-page-ea3e98edb84abbc5e758884f69149027-min.css","js":"//static.squarespace.com/universal/scripts-compressed/search-page-80c1f928ec3f592b336a-min.en-US.js"},"squarespace-search-preview":{"js":"//static.squarespace.com/universal/scripts-compressed/search-preview-f1488c7c5211cf9bbdff-min.en-US.js"},"squarespace-share-buttons":{"js":"//static.squarespace.com/universal/scripts-compressed/share-buttons-99a906ed04b21709e40a-min.en-US.js"},"squarespace-simple-liking":{"css":"//static.squarespace.com/universal/styles-compressed/simple-liking-310d0b18e112f708f91339b11fd55714-min.css","js":"//static.squarespace.com/universal/scripts-compressed/simple-liking-3c0cddd4436303abeb23-min.en-US.js"},"squarespace-social-buttons":{"css":"//static.squarespace.com/universal/styles-compressed/social-buttons-26106f808f7e9c739a7f862a408ed039-min.css","js":"//static.squarespace.com/universal/scripts-compressed/social-buttons-3eb8dfa35482767e9cbb-min.en-US.js"},"squarespace-tourdates":{"css":"//static.squarespace.com/universal/styles-compressed/tourdates-d41d8cd98f00b204e9800998ecf8427e-min.css","js":"//static.squarespace.com/universal/scripts-compressed/tourdates-045279de8b629dea7579-min.en-US.js"},"squarespace-website-overlays-manager":{"css":"//static.squarespace.com/universal/styles-compressed/website-overlays-manager-0db5c7c60d1d79fe731ced48ff0cc7c0-min.css","js":"//static.squarespace.com/universal/scripts-compressed/website-overlays-manager-d6423c0b9bfc67ed5be7-min.en-US.js"}},"pageType":1,"website":{"id":"5c0d77353c3a53edf57d1944","identifier":"reapermc","websiteType":1,"contentModifiedOn":1544831215094,"cloneable":false,"siteStatus":{},"language":"en-US","timeZone":"America/Chicago","machineTimeZoneOffset":-21600000,"timeZoneOffset":-21600000,"timeZoneAbbr":"CST","siteTitle":"ReaperHCF","fullSiteTitle":"ReaperHCF","siteDescription":"","logoImageId":"5c0dbd751ae6cf6c70974c4a","socialLogoImageId":"5c0dbe240ebbe8549dbaf5fc","shareButtonOptions":{"7":true,"1":true,"2":true},"logoImageUrl":"//static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c0dbd751ae6cf6c70974c4a/1544831215094/","socialLogoImageUrl":"//static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c0dbe240ebbe8549dbaf5fc/1544831215094/","authenticUrl":"https://reapermc.squarespace.com","internalUrl":"https://reapermc.squarespace.com","baseUrl":"https://reapermc.squarespace.com","sslSetting":3,"isHstsEnabled":false,"socialAccounts":[{"serviceId":4,"userId":"1021427609715044352","userName":"TheReaperHCF","screenname":"ReaperHCF Network","addedOn":1544484445167,"profileUrl":"https://twitter.com/TheReaperHCF","iconUrl":"http://pbs.twimg.com/profile_images/1039292657544167429/_Z8zuhlo_normal.jpg","collectionId":"5c0ef65d96e76f0ffb6c0399","iconEnabled":true,"serviceName":"twitter"}],"typekitId":"","statsMigrated":false,"imageMetadataProcessingEnabled":false,"showOwnerLogin":false},"websiteSettings":{"id":"5c0d77353c3a53edf57d1946","websiteId":"5c0d77353c3a53edf57d1944","subjects":[],"country":"US","state":"TX","simpleLikingEnabled":true,"mobileInfoBarSettings":{"isContactEmailEnabled":false,"isContactPhoneNumberEnabled":false,"isLocationEnabled":false,"isBusinessHoursEnabled":false},"commentLikesAllowed":true,"commentAnonAllowed":true,"commentThreaded":true,"commentApprovalRequired":false,"commentAvatarsOn":true,"commentSortType":2,"commentFlagThreshold":0,"commentFlagsAllowed":true,"commentEnableByDefault":true,"commentDisableAfterDaysDefault":0,"disqusShortname":"","commentsEnabled":false,"storeSettings":{"returnPolicy":null,"termsOfService":null,"privacyPolicy":null,"paymentSettings":{},"expressCheckout":false,"continueShoppingLinkUrl":"/","useLightCart":false,"showNoteField":false,"shippingCountryDefaultValue":"US","billToShippingDefaultValue":false,"showShippingPhoneNumber":true,"isShippingPhoneRequired":false,"showBillingPhoneNumber":true,"isBillingPhoneRequired":false,"multipleQuantityAllowedForServices":true,"currenciesSupported":["CHF","HKD","MXN","EUR","DKK","USD","CAD","MYR","NOK","THB","AUD","SGD","ILS","PLN","GBP","CZK","SEK","NZD","PHP","RUB"],"defaultCurrency":"USD","selectedCurrency":"USD","measurementStandard":1,"showCustomCheckoutForm":false,"enableMailingListOptInByDefault":false,"sameAsRetailLocation":false,"isLive":false},"useEscapeKeyToLogin":true,"ssBadgeType":1,"ssBadgePosition":4,"ssBadgeVisibility":1,"ssBadgeDevices":1,"pinterestOverlayOptions":{"mode":"disabled"},"ampEnabled":false},"cookieSettings":{"isCookieBannerEnabled":false,"isRestrictiveCookiePolicyEnabled":false,"isRestrictiveCookiePolicyAbsolute":false,"cookieBannerText":"","cookieBannerTheme":"","cookieBannerVariant":"","cookieBannerPosition":"","cookieBannerCtaVariant":"","cookieBannerCtaText":""},"websiteCloneable":false,"collection":{"title":"Home","id":"591a1b3ef7e0abb7026f16af","fullUrl":"/","type":1},"subscribed":false,"appDomain":"squarespace.com","templateTweakable":true,"tweakJSON":{"aspect-ratio":"Auto","gallery-arrow-style":"No Background","gallery-aspect-ratio":"3:2 Standard","gallery-auto-crop":"true","gallery-autoplay":"false","gallery-design":"Slideshow","gallery-info-overlay":"Show on Hover","gallery-loop":"false","gallery-navigation":"Bullets","gallery-show-arrows":"true","gallery-transitions":"Fade","galleryArrowBackground":"rgba(34,34,34,1)","galleryArrowColor":"rgba(255,255,255,1)","galleryAutoplaySpeed":"3","galleryCircleColor":"rgba(255,255,255,1)","galleryInfoBackground":"rgba(0, 0, 0, .7)","galleryThumbnailSize":"100px","gridSize":"350px","gridSpacing":"20px","tweak-blog-list-columns":"3","tweak-blog-list-item-image-aspect-ratio-grid":"1:1 Square","tweak-blog-list-item-image-aspect-ratio-stacked":"1:1 Square","tweak-blog-list-item-image-show":"true","tweak-blog-list-spacing":"40px","tweak-blog-list-style":"Grid","tweak-footer-layout":"Stacked","tweak-header-bottom-overlay-on-index-gallery":"false","tweak-index-gallery-apply-bottom-spacing":"true","tweak-index-gallery-autoplay-duration":"2","tweak-index-gallery-autoplay-enable":"true","tweak-index-gallery-fixed-height":"true","tweak-index-gallery-height":"100vh","tweak-index-gallery-indicators":"Lines","tweak-index-gallery-layout":"Packed","tweak-index-gallery-transition":"Fade","tweak-index-gallery-transition-duration":"500","tweak-index-nav-position":"Right","tweak-index-page-apply-bottom-spacing":"false","tweak-index-page-fullscreen":"Pages with Backgrounds Only","tweak-index-page-min-height":"100vh","tweak-mobile-breakpoint":"630px","tweak-overlay-parallax-enabled":"true","tweak-overlay-parallax-new-math":"true","tweak-product-item-image-zoom-factor":"2","tweak-product-list-item-hover-behavior":"Fade","tweak-product-list-items-per-row":"3","tweak-site-ajax-loading-enable":"true","tweak-site-border-show":"false","tweak-site-border-width":"50px"},"templateId":"55f0aac0e4b0f0a5b7e0b22e","pageFeatures":[1,2,4],"googleMapsStaticApiKey":"AIzaSyBQdch5IcgcQaKNG76sbMQv1MEBEKLeQ-8","impersonatedSession":false,"demoCollections":[{"collectionId":"591a1b3ef7e0abb7026f16af","deleted":false},{"collectionId":"591a1b6117bffc0e59be8f12","deleted":true},{"collectionId":"591a1e1e579fb30e8c3cb203","deleted":true},{"collectionId":"591a1ed5be6594affe82bf95","deleted":true},{"collectionId":"591b129bff7c50026dc11707","deleted":true},{"collectionId":"591b160dbebafbb2f402fdfd","deleted":true},{"collectionId":"591b3609ebbd1ae30eca2892","deleted":true},{"collectionId":"591b37dfb3db2beed2250361","deleted":true},{"collectionId":"591b3a35414fb554c318407b","deleted":true}],"isFacebookTab":false,"tzData":{"zones":[[-360,"US","C%sT",null]],"rules":{"US":[[1967,2006,null,"Oct","lastSun","2:00","0","S"],[1987,2006,null,"Apr","Sun>=1","2:00","1:00","D"],[2007,"max",null,"Mar","Sun>=8","2:00","1:00","D"],[2007,"max",null,"Nov","Sun>=1","2:00","0","S"]]}}};</script><script type="text/javascript"> SquarespaceFonts.loadViaContext(); Squarespace.load(window);</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://reapermc.squarespace.com/home-polaris?format=RSS" />
+<script type="application/ld+json">{"url":"https://reapermc.squarespace.com","name":"ReaperHCF","description":"","image":"//static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c0dbd751ae6cf6c70974c4a/1544831215094/","@context":"http://schema.org","@type":"WebSite"}</script><!--[if gte IE 9]> <link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5c0d77353c3a53edf57d1944/0/55f0aac0e4b0f0a5b7e0b22e/5c0d77353c3a53edf57d1958/320-05142015/1544739315330/site.css?&filterFeatures=false&part=1"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5c0d77353c3a53edf57d1944/0/55f0aac0e4b0f0a5b7e0b22e/5c0d77353c3a53edf57d1958/320-05142015/1544739315330/site.css?&filterFeatures=false&part=2"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5c0d77353c3a53edf57d1944/0/55f0aac0e4b0f0a5b7e0b22e/5c0d77353c3a53edf57d1958/320-05142015/1544739315330/site.css?&filterFeatures=false&part=3"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5c0d77353c3a53edf57d1944/0/55f0aac0e4b0f0a5b7e0b22e/5c0d77353c3a53edf57d1958/320-05142015/1544739315330/site.css?&filterFeatures=false&part=4"/><![endif]-->
+<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5c0d77353c3a53edf57d1944/0/55f0aac0e4b0f0a5b7e0b22e/5c0d77353c3a53edf57d1958/320-05142015/1544739315330/site.css?&filterFeatures=false&noMedia=true&part=1"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5c0d77353c3a53edf57d1944/0/55f0aac0e4b0f0a5b7e0b22e/5c0d77353c3a53edf57d1958/320-05142015/1544739315330/site.css?&filterFeatures=false&noMedia=true&part=2"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5c0d77353c3a53edf57d1944/0/55f0aac0e4b0f0a5b7e0b22e/5c0d77353c3a53edf57d1958/320-05142015/1544739315330/site.css?&filterFeatures=false&noMedia=true&part=3"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5c0d77353c3a53edf57d1944/0/55f0aac0e4b0f0a5b7e0b22e/5c0d77353c3a53edf57d1958/320-05142015/1544739315330/site.css?&filterFeatures=false&noMedia=true&part=4"/><![endif]-->
+<!--[if !IE]> --><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5c0d77353c3a53edf57d1944/0/55f0aac0e4b0f0a5b7e0b22e/5c0d77353c3a53edf57d1958/320-05142015/1544739315330/site.css?&filterFeatures=false"/><!-- <![endif]-->
+<script>Static.COOKIE_BANNER_CAPABLE = true;</script>
+<!-- End of Squarespace Headers -->
+  </head>
+  <body id="collection-591a1b3ef7e0abb7026f16af" class="tweak-social-icons-style-knockout tweak-social-icons-shape-square tweak-site-width-option-full-width tweak-icon-weight-light  tweak-site-ajax-loading-enable tweak-site-ajax-loading-bar-show ancillary-header-top-left-layout-horizontal ancillary-header-top-center-layout-horizontal ancillary-header-top-right-layout-horizontal ancillary-header-bottom-left-layout-horizontal ancillary-header-bottom-center-layout-horizontal ancillary-header-bottom-right-layout-horizontal ancillary-header-branding-position-bottom-left ancillary-header-tagline-position-hide ancillary-header-primary-nav-position-bottom-right ancillary-header-secondary-nav-position-bottom-right ancillary-header-social-position-hide ancillary-header-search-position-hide ancillary-header-cart-position-bottom-right ancillary-header-account-position-hide tweak-header-primary-nav-hover-style-fade tweak-header-primary-nav-button-style-solid tweak-header-primary-nav-button-shape-square tweak-header-secondary-nav-inherit-styles tweak-header-secondary-nav-hover-style-spotlight tweak-header-secondary-nav-button-style-solid tweak-header-secondary-nav-button-shape-square tweak-header-search-style-underlined tweak-header-search-placeholder-show tweak-header-cart-style-text tweak-header-account-style-text tweak-overlay-parallax-enabled tweak-overlay-parallax-new-math tweak-index-nav-style-none tweak-index-nav-position-right tweak-index-nav-text-show tweak-index-page-fullscreen-pages-with-backgrounds-only  tweak-index-page-scroll-indicator-icon-only tweak-index-page-scroll-indicator-icon-arrow tweak-index-page-scroll-indicator-icon-weight-light  tweak-index-gallery-layout-packed tweak-index-gallery-spacing-sides-show tweak-index-gallery-spacing-top-bottom-show tweak-index-gallery-fixed-height tweak-index-gallery-apply-bottom-spacing tweak-index-gallery-hover-style-fade tweak-index-gallery-controls-small-arrows tweak-index-gallery-controls-icon-weight-hairline tweak-index-gallery-indicators-lines tweak-index-gallery-autoplay-enable tweak-index-gallery-transition-fade tweak-index-gallery-content-position-top-left tweak-index-gallery-content-text-alignment-left tweak-footer-show tweak-footer-layout-stacked tweak-footer-layout-columns-auto tweak-footer-stacked-alignment-center   tweak-mobile-bar-top-fixed ancillary-mobile-bar-branding-position-top-left ancillary-mobile-bar-menu-icon-position-top-right tweak-mobile-bar-menu-icon-hamburger ancillary-mobile-bar-search-icon-position-hide ancillary-mobile-bar-cart-position-bottom-center tweak-mobile-bar-cart-style-cart ancillary-mobile-bar-account-position-hide tweak-mobile-bar-account-style-text tweak-mobile-overlay-slide-origin-left tweak-mobile-overlay-close-show  tweak-mobile-overlay-menu-primary-button-style-solid tweak-mobile-overlay-menu-primary-button-shape-square tweak-mobile-overlay-menu-secondary-inherit  tweak-mobile-overlay-menu-secondary-button-style-solid tweak-mobile-overlay-menu-secondary-button-shape-square tweak-quote-block-alignment-center  tweak-blog-meta-primary-tags tweak-blog-meta-secondary-date tweak-blog-list-style-grid tweak-blog-list-separator-show tweak-blog-list-alignment-left tweak-blog-list-item-image-show tweak-blog-list-item-image-aspect-ratio-grid-11-square tweak-blog-list-item-image-aspect-ratio-stacked-11-square tweak-blog-list-item-title-show tweak-blog-list-item-excerpt-show tweak-blog-list-item-body-show tweak-blog-list-item-readmore-inline tweak-blog-list-item-meta-position-below-content tweak-blog-list-pagination-link-label-show  tweak-blog-list-pagination-link-icon-weight-light tweak-blog-item-alignment-center tweak-blog-item-meta-position-below-title tweak-blog-item-share-position-below-content tweak-blog-item-pagination-link-icon-show tweak-blog-item-pagination-link-label-show tweak-blog-item-pagination-link-title-show tweak-blog-item-pagination-link-meta-hide tweak-blog-item-pagination-link-icon-weight-light   event-thumbnails event-thumbnail-size-32-standard event-date-label  event-list-show-cats event-list-date event-list-time event-list-address     event-excerpts  event-item-back-link    gallery-design-slideshow aspect-ratio-auto lightbox-style-dark gallery-navigation-bullets gallery-info-overlay-show-on-hover gallery-aspect-ratio-32-standard gallery-arrow-style-no-background gallery-transitions-fade gallery-show-arrows gallery-auto-crop   tweak-product-list-image-aspect-ratio-11-square tweak-product-list-item-hover-behavior-fade tweak-product-list-meta-position-under tweak-product-list-mobile-meta-position-under tweak-product-list-meta-alignment-under-center tweak-product-list-meta-alignment-overlay-center-center tweak-product-list-show-title tweak-product-list-show-price tweak-product-list-filter-display-top tweak-product-list-filter-alignment-center tweak-product-item-nav-show-breadcrumb-and-pagination tweak-product-item-nav-pagination-style-previousnext tweak-product-item-nav-breadcrumb-alignment-left tweak-product-item-nav-pagination-alignment-split tweak-product-item-gallery-position-left tweak-product-item-gallery-design-stacked tweak-product-item-gallery-aspect-ratio-34-three-four-vertical tweak-product-item-gallery-thumbnail-alignment-center tweak-product-item-details-alignment-left tweak-product-item-details-show-title tweak-product-item-details-show-price tweak-product-item-details-show-excerpt tweak-product-item-details-excerpt-position-below-price tweak-product-item-details-show-share-buttons tweak-product-item-details-show-variants tweak-product-item-details-show-quantity tweak-product-item-details-options-style-square tweak-product-item-details-show-add-to-cart-button tweak-product-item-details-add-to-cart-button-style-outline tweak-product-item-details-add-to-cart-button-shape-square tweak-product-item-details-add-to-cart-button-padding-large tweak-product-item-image-zoom-enabled tweak-product-item-image-zoom-behavior-click  tweak-product-badge-style-none tweak-product-badge-position-top-right tweak-product-badge-inset-floating newsletter-style-custom hide-opentable-icons opentable-style-dark small-button-style-outline small-button-shape-rounded medium-button-style-solid medium-button-shape-square large-button-style-outline large-button-shape-square image-block-poster-text-alignment-center image-block-card-dynamic-font-sizing image-block-card-content-position-center image-block-card-text-alignment-left image-block-overlap-dynamic-font-sizing image-block-overlap-content-position-center image-block-overlap-text-alignment-left image-block-collage-dynamic-font-sizing image-block-collage-content-position-top image-block-collage-text-alignment-left image-block-stack-dynamic-font-sizing image-block-stack-text-alignment-left button-style-outline button-corner-style-rounded tweak-product-quick-view-button-style-floating tweak-product-quick-view-button-position-center tweak-product-quick-view-lightbox-excerpt-display-truncate tweak-product-quick-view-lightbox-show-arrows tweak-product-quick-view-lightbox-show-close-button tweak-product-quick-view-lightbox-controls-weight-medium tweak-share-buttons-style-icon-only tweak-share-buttons-icons-show    tweak-share-buttons-standard-background-color native-currency-code-usd collection-591a1b3ef7e0abb7026f16af collection-type-index collection-layout-default homepage view-list mobile-style-available sqs-has-custom-cart has-logo-image has-social has-parallax-images enable-load-effects has-primary-nav" data-controller="HashManager, SiteLoader, MobileClassname">
 
-<a href="/whats-new/posts/" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " data-nav-id="newPosts">New posts</a>
-<a href="/search/?type=post" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " data-nav-id="searchForums">Search forums</a>
-</div>
-</div>
-</div>
-</li>
-<li>
-<div class="p-navEl " data-has-children="true">
-<a href="/whats-new/" class="p-navEl-link p-navEl-link--splitMenu " data-nav-id="whatsNew">What's new</a>
-<a data-xf-key="3" data-xf-click="menu" data-menu-pos-ref="< .p-navEl" data-arrow-pos-ref="< .p-navEl" class="p-navEl-splitTrigger" role="button" tabindex="0" aria-label="Toggle expanded" aria-expanded="false" aria-haspopup="true"></a>
-<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
-<div class="menu-content">
+    <div class="Loader"></div>
 
-<a href="/whats-new/posts/" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " rel="nofollow" data-nav-id="whatsNewPosts">New posts</a>
-<a href="/whats-new/profile-posts/" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " rel="nofollow" data-nav-id="whatsNewProfilePosts">New profile posts</a>
-<a href="/whats-new/latest-activity" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " rel="nofollow" data-nav-id="latestActivity">Latest activity</a>
-</div>
-</div>
-</div>
-</li>
-<li>
-<div class="p-navEl " data-has-children="true">
-<a href="/members/" class="p-navEl-link p-navEl-link--splitMenu " data-nav-id="members">Members</a>
-<a data-xf-key="4" data-xf-click="menu" data-menu-pos-ref="< .p-navEl" data-arrow-pos-ref="< .p-navEl" class="p-navEl-splitTrigger" role="button" tabindex="0" aria-label="Toggle expanded" aria-expanded="false" aria-haspopup="true"></a>
-<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
-<div class="menu-content">
+    <div class="Mobile" data-nc-base="mobile-bar" data-controller="AncillaryLayout">
+  <div class="Mobile-bar Mobile-bar--top" data-nc-group="top" data-controller="MobileOffset">
 
-<a href="/online/" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " data-nav-id="currentVisitors">Current visitors</a>
-<a href="/whats-new/profile-posts/" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " rel="nofollow" data-nav-id="newProfilePosts">New profile posts</a>
-<a href="/search/?type=profile_post" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " data-nav-id="searchProfilePosts">Search profile posts</a>
-</div>
-</div>
-</div>
-</li>
-<li>
-<div class="p-navEl ">
-<a href="https://store.skycade.net" class="p-navEl-link " data-xf-key="5" data-nav-id="Store">Store</a>
-</div>
-</li>
-<li>
-<div class="p-navEl " data-has-children="true">
-<a data-xf-key="6" data-xf-click="menu" data-menu-pos-ref="< .p-navEl" data-arrow-pos-ref="< .p-navEl" class="p-navEl-linkHolder" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true">
-<span class="p-navEl-link p-navEl-link--menuTrigger " data-nav-id="Applications">Applications</span>
-</a>
-<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
-<div class="menu-content">
+    <div data-nc-container="top-left">
+      <a href="/" class="Mobile-bar-branding" data-nc-element="branding" data-content-field="site-title">
+        
+          
+            <img src="//static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c0dbd751ae6cf6c70974c4a/1544831215094/?format=1500w" alt="ReaperHCF" class="Mobile-bar-branding-logo" />
+          
+        
+      </a>
+    </div>
+    <div data-nc-container="top-center"></div>
+    <div data-nc-container="top-right"></div>
+  </div>
+  <div class="Mobile-bar Mobile-bar--bottom" data-nc-group="bottom" data-controller="MobileOffset">
+    <div data-nc-container="bottom-left">
+      <button class="Mobile-bar-menu" data-nc-element="menu-icon" data-controller-overlay="menu" data-controller="MobileOverlayToggle">
+        <svg class="Icon Icon--hamburger" viewBox="0 0 24 18">
+          <use xlink:href="/assets/ui-icons.svg#hamburger-icon--even" class="use--even"></use>
+          <use xlink:href="/assets/ui-icons.svg#hamburger-icon--odd" class="use--odd"></use>
+        </svg>
+        <svg class="Icon Icon--hotdog" viewBox="0 0 24 14">
+          <use xlink:href="/assets/ui-icons.svg#hotdog-icon--even" class="use--even"></use>
+          <use xlink:href="/assets/ui-icons.svg#hotdog-icon--odd" class="use--odd"></use>
+        </svg>
+        <svg class="Icon Icon--plus" viewBox="0 0 20 20">
+          <use xlink:href="/assets/ui-icons.svg#plus-icon--even" class="use--even"></use>
+          <use xlink:href="/assets/ui-icons.svg#plus-icon--odd" class="use--odd"></use>
+        </svg>
+        <svg class="Icon Icon--dots-horizontal" viewBox="0 0 25 7">
+          <use xlink:href="/assets/ui-icons.svg#dots-horizontal-icon--even" class="use--even"></use>
+          <use xlink:href="/assets/ui-icons.svg#dots-horizontal-icon--odd" class="use--odd"></use>
+        </svg>
+        <svg class="Icon Icon--dots-vertical" viewBox="0 0 7 25">
+          <use xlink:href="/assets/ui-icons.svg#dots-vertical-icon--even" class="use--even"></use>
+          <use xlink:href="/assets/ui-icons.svg#dots-vertical-icon--odd" class="use--odd"></use>
+        </svg>
+        <svg class="Icon Icon--squares-horizontal" viewBox="0 0 25 7">
+          <use xlink:href="/assets/ui-icons.svg#squares-horizontal-icon--even" class="use--even"></use>
+          <use xlink:href="/assets/ui-icons.svg#squares-horizontal-icon--odd" class="use--odd"></use>
+        </svg>
+        <svg class="Icon Icon--squares-vertical" viewBox="0 0 7 25">
+          <use xlink:href="/assets/ui-icons.svg#squares-vertical-icon--even" class="use--even"></use>
+          <use xlink:href="/assets/ui-icons.svg#squares-vertical-icon--odd" class="use--odd"></use>
+        </svg>
+      </button>
+    </div>
+    <div data-nc-container="bottom-center">
+      
+    </div>
+    <div data-nc-container="bottom-right">
+      
+      <a href="/search" class="Mobile-bar-search" data-nc-element="search-icon">
+        <svg class="Icon Icon--search" viewBox="0 0 20 20">
+          <use xlink:href="/assets/ui-icons.svg#search-icon"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
 
-<a href="https://goo.gl/forms/ViWyTrvMjEbCWZkF2" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " data-nav-id="Staff">Staff applications</a>
-<a href="https://goo.gl/forms/rtit9pkUcRXCvKPE2" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " data-nav-id="Builder">Builder application</a>
-</div>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</nav>
-<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
-<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
-<div class="offCanvasMenu-content">
-<div class="offCanvasMenu-header">
-Menu
-<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Close"></a>
-</div>
-<div class="p-offCanvasRegisterLink">
-<div class="offCanvasMenu-linkHolder">
-<a href="/login/" class="offCanvasMenu-link" rel="nofollow" data-xf-click="overlay" data-menu-close="true">
-Log in
-</a>
-</div>
-<hr class="offCanvasMenu-separator" />
-<div class="offCanvasMenu-linkHolder">
-<a href="/register/" class="offCanvasMenu-link" rel="nofollow" data-xf-click="overlay" data-menu-close="true">
-Register
-</a>
-</div>
-<hr class="offCanvasMenu-separator" />
-</div>
-<div class="js-offCanvasNavTarget"></div>
-</div>
-</div>
-</div>
-</div>
-</header>
-<div class="p-sectionLinks">
-<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
-<div class="hScroller-scroll">
-<ul class="p-sectionLinks-list">
-<li>
-<div class="p-navEl ">
-<a href="/whats-new/posts/" class="p-navEl-link " data-xf-key="alt+1" data-nav-id="newPosts">New posts</a>
-</div>
-</li>
-<li>
-<div class="p-navEl ">
-<a href="/search/?type=post" class="p-navEl-link " data-xf-key="alt+2" data-nav-id="searchForums">Search forums</a>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="header--proxy">
-<div class="header-proxy--overlay"></div>
-<div class="p-guest--message">
-<h1>Welcome!</h1>
-<p>By registering with us, you'll be able to discuss, share and private message with other members of our community.</p>
-<a href="index.php?register/" class="button--cta button button--icon button--icon--write"><span class="button-text">
-SignUp Now!
-</span></a>
-</div>
-</div>
-<div class="p-body">
-<div class="p-body-inner">
+  <div class="Mobile-overlay">
+    <div class="Mobile-overlay-menu" data-controller="MobileOverlayFolders">
+      <div class="Mobile-overlay-menu-main">
+        <nav class="Mobile-overlay-nav Mobile-overlay-nav--primary" data-content-field="navigation">
+          
+  
+    
+      
+        
+          
+            <a href="/" class="Mobile-overlay-nav-item">
+              Home
+            </a>
+          
+        
+      
+    
+    
+  
 
-<div class="p-breadcrumbs--container">
-<ul class="p-breadcrumbs " itemscope itemtype="https://schema.org/BreadcrumbList">
-<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-<a href="https://skycade.net" itemprop="item">
-<span itemprop="name">Home</span>
-</a>
-</li>
-</ul>
-<span id="collapse-side" class="collapseTrigger collapseTrigger--block  is-active" data-xf-click="toggle" data-xf-init="toggle-storage" data-storage-type="cookie" data-target=".p-body-sidebar, .p-body-content" data-storage-key="_side-1"></span>
-</div>
-<noscript><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding.</div></noscript>
-<!--[if lt IE 9]><div class="blockMessage blockMessage&#45;&#45;important blockMessage&#45;&#45;iconic">You are using an out of date browser. It  may not display this or other websites correctly.<br />You should upgrade or use an <a href="https://www.google.com/chrome/browser/" target="_blank">alternative browser</a>.</div><![endif]-->
-<div class="p-body-header">
-<div class="p-title ">
-<h1 class="p-title-value">Skycade Forums</h1>
-<div class="p-title-pageAction">
-<a href="/whats-new/posts/" class="button button--icon button--icon--bolt"><span class="button-text">
-New posts
-</span></a>
-</div>
-</div>
-</div>
-<div class="p-body-main p-body-main--withSidebar ">
-<div class="p-body-content is-active">
-<div class="p-body-pageContent">
-<div class="block block--category block--category1">
-<span class="u-anchorTarget" id="news-and-information.1"></span>
-<div class="block-container">
-<h2 class="block-header">
-<a href="/.#news-and-information.1">News and Information</a>
-<span id="collapse-1" class="collapseTrigger collapseTrigger--block  is-active" data-xf-click="toggle" data-xf-init="toggle-storage" data-storage-type="cookie" data-target=".block--category1 .block-body" data-storage-key="_node-1"></span>
-</h2>
-<div class="block-body block-body--collapsible  is-active">
-<div class="node node--id2 node--depth2 node--forum node--unread">
-<div class="node-body">
-<span class="node-icon" aria-hidden="true"><i></i></span>
-<div class="node-main js-nodeMain">
-<h3 class="node-title">
-<a href="/forums/announcements/" data-xf-init="" data-shortcut="node-description">Announcements</a>
-<span class="node--newIndicator">New</span>
-</h3>
-<div class="node-meta">
-<div class="node-statsMeta">
-<dl class="pairs pairs--inline">
-<dt>Threads</dt>
-<dd>12</dd>
-</dl>
-<dl class="pairs pairs--inline">
-<dt>Messages</dt>
-<dd>931</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="node-stats">
-<dl class="pairs pairs--rows">
-<dd>12</dd>
-<dt>Threads</dt>
-</dl>
-</div>
-<div class="node-extra">
-<div class="lastpost--avatar">
-<a href="/members/xxvrexzyzxx.4815/" class="avatar avatar--xs" data-user-id="4815" data-xf-init="member-tooltip">
-<img src="/data/avatars/s/4/4815.jpg?1542460165" srcset="/data/avatars/m/4/4815.jpg?1542460165 2x" alt="XXVrexzyzXX" class="avatar-u4815-s" />
-</a>
-</div>
-<div class="node-extra-row"><a href="/posts/50873/" class="node-extra-title" title="Creative Building Competition">Creative Building Competition</a></div>
-<div class="node-extra-row">
-<ul class="listInline listInline--bullet">
-<li><time class="node-extra-date u-dt" dir="auto" datetime="2018-12-14T14:34:18+0000" data-time="1544798058" data-date-string="Dec 14, 2018" data-time-string="2:34 PM" title="Dec 14, 2018 at 2:34 PM">Today at 2:34 PM</time>
-<li class="node-extra-user"><a href="/members/xxvrexzyzxx.4815/" class="username " dir="auto" data-user-id="4815" data-xf-init="member-tooltip">XXVrexzyzXX</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="node node--id3 node--depth2 node--forum node--read">
-<div class="node-body">
-<span class="node-icon" aria-hidden="true"><i></i></span>
-<div class="node-main js-nodeMain">
-<h3 class="node-title">
-<a href="/forums/update-logs.3/" data-xf-init="" data-shortcut="node-description">Update Logs</a>
-<span class="node--newIndicator">New</span>
-</h3>
-<div class="node-meta">
-<div class="node-statsMeta">
-<dl class="pairs pairs--inline">
-<dt>Threads</dt>
-<dd>0</dd>
-</dl>
-<dl class="pairs pairs--inline">
-<dt>Messages</dt>
-<dd>0</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="node-stats">
-<dl class="pairs pairs--rows">
-<dd>0</dd>
-<dt>Threads</dt>
-</dl>
-</div>
-<div class="node-extra">
-<span class="node-extra-placeholder">None</span>
-</div>
-</div>
-</div>
-<div class="node node--id4 node--depth2 node--forum node--read">
-<div class="node-body">
-<span class="node-icon" aria-hidden="true"><i></i></span>
-<div class="node-main js-nodeMain">
-<h3 class="node-title">
-<a href="/forums/rules.4/" data-xf-init="" data-shortcut="node-description">Rules</a>
-<span class="node--newIndicator">New</span>
-</h3>
-<div class="node-meta">
-<div class="node-statsMeta">
-<dl class="pairs pairs--inline">
-<dt>Threads</dt>
-<dd>4</dd>
-</dl>
-<dl class="pairs pairs--inline">
-<dt>Messages</dt>
-<dd>5</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="node-stats">
-<dl class="pairs pairs--rows">
-<dd>4</dd>
-<dt>Threads</dt>
-</dl>
-</div>
-<div class="node-extra">
-<div class="lastpost--avatar">
-<a href="/members/welshalex.27/" class="avatar avatar--xs" data-user-id="27" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/4b585e45-2799-48df-b8b5-5e763f9fbcec?size=96" srcset="https://crafatar.com/avatars/4b585e45-2799-48df-b8b5-5e763f9fbcec?size=96 2x" alt="WelshAlex" class="avatar-u27-s" />
-</a>
-</div>
-<div class="node-extra-row"><a href="/posts/58/" class="node-extra-title" title="Discord Rules">Discord Rules</a></div>
-<div class="node-extra-row">
-<ul class="listInline listInline--bullet">
-<li><time class="node-extra-date u-dt" dir="auto" datetime="2018-08-08T13:59:20+0100" data-time="1533733160" data-date-string="Aug 8, 2018" data-time-string="1:59 PM" title="Aug 8, 2018 at 1:59 PM">Aug 8, 2018</time>
-<li class="node-extra-user"><a href="/members/welshalex.27/" class="username " dir="auto" data-user-id="27" data-xf-init="member-tooltip">WelshAlex</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="node node--id5 node--depth2 node--forum node--read">
-<div class="node-body">
-<span class="node-icon" aria-hidden="true"><i></i></span>
-<div class="node-main js-nodeMain">
-<h3 class="node-title">
-<a href="/forums/guides.5/" data-xf-init="" data-shortcut="node-description">Guides</a>
-<span class="node--newIndicator">New</span>
-</h3>
-<div class="node-meta">
-<div class="node-statsMeta">
-<dl class="pairs pairs--inline">
-<dt>Threads</dt>
-<dd>3</dd>
-</dl>
-<dl class="pairs pairs--inline">
-<dt>Messages</dt>
-<dd>3</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="node-stats">
-<dl class="pairs pairs--rows">
-<dd>3</dd>
-<dt>Threads</dt>
-</dl>
-</div>
-<div class="node-extra">
-<div class="lastpost--avatar">
-<a href="/members/welshalex.27/" class="avatar avatar--xs" data-user-id="27" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/4b585e45-2799-48df-b8b5-5e763f9fbcec?size=96" srcset="https://crafatar.com/avatars/4b585e45-2799-48df-b8b5-5e763f9fbcec?size=96 2x" alt="WelshAlex" class="avatar-u27-s" />
-</a>
-</div>
-<div class="node-extra-row"><a href="/posts/30733/" class="node-extra-title" title="Skyblock Guide">Skyblock Guide</a></div>
-<div class="node-extra-row">
-<ul class="listInline listInline--bullet">
-<li><time class="node-extra-date u-dt" dir="auto" datetime="2018-10-22T14:21:06+0100" data-time="1540214466" data-date-string="Oct 22, 2018" data-time-string="2:21 PM" title="Oct 22, 2018 at 2:21 PM">Oct 22, 2018</time>
-<li class="node-extra-user"><a href="/members/welshalex.27/" class="username " dir="auto" data-user-id="27" data-xf-init="member-tooltip">WelshAlex</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="block block--category block--category6">
-<span class="u-anchorTarget" id="community.6"></span>
-<div class="block-container">
-<h2 class="block-header">
-<a href="/.#community.6">Community</a>
-<span id="collapse-6" class="collapseTrigger collapseTrigger--block  is-active" data-xf-click="toggle" data-xf-init="toggle-storage" data-storage-type="cookie" data-target=".block--category6 .block-body" data-storage-key="_node-6"></span>
-</h2>
-<div class="block-body block-body--collapsible  is-active">
-<div class="node node--id7 node--depth2 node--forum node--unread">
-<div class="node-body">
-<span class="node-icon" aria-hidden="true"><i></i></span>
-<div class="node-main js-nodeMain">
-<h3 class="node-title">
-<a href="/forums/introduce-yourself.7/" data-xf-init="" data-shortcut="node-description">Introduce Yourself</a>
-<span class="node--newIndicator">New</span>
-</h3>
-<div class="node-meta">
-<div class="node-statsMeta">
-<dl class="pairs pairs--inline">
-<dt>Threads</dt>
-<dd>844</dd>
-</dl>
-<dl class="pairs pairs--inline">
-<dt>Messages</dt>
-<dd>5,214</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="node-stats">
-<dl class="pairs pairs--rows">
-<dd>844</dd>
-<dt>Threads</dt>
-</dl>
-</div>
-<div class="node-extra">
-<div class="lastpost--avatar">
-<a href="/members/1st_fallen_angel.5783/" class="avatar avatar--xs" data-user-id="5783" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/7e6afcc0-2ac2-4f0b-9d96-a2ccd288abd4?size=96" srcset="https://crafatar.com/avatars/7e6afcc0-2ac2-4f0b-9d96-a2ccd288abd4?size=96 2x" alt="1st_Fallen_Angel" class="avatar-u5783-s" />
-</a>
-</div>
-<div class="node-extra-row"><a href="/posts/51019/" class="node-extra-title" title="98hpui">98hpui</a></div>
-<div class="node-extra-row">
-<ul class="listInline listInline--bullet">
-<li><time class="node-extra-date u-dt" dir="auto" datetime="2018-12-14T23:26:02+0000" data-time="1544829962" data-date-string="Dec 14, 2018" data-time-string="11:26 PM" title="Dec 14, 2018 at 11:26 PM">A moment ago</time>
-<li class="node-extra-user"><a href="/members/1st_fallen_angel.5783/" class="username " dir="auto" data-user-id="5783" data-xf-init="member-tooltip">1st_Fallen_Angel</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="node node--id8 node--depth2 node--forum node--unread">
-<div class="node-body">
-<span class="node-icon" aria-hidden="true"><i></i></span>
-<div class="node-main js-nodeMain">
-<h3 class="node-title">
-<a href="/forums/recruitment.8/" data-xf-init="" data-shortcut="node-description">Recruitment</a>
-<span class="node--newIndicator">New</span>
-</h3>
-<div class="node-meta">
-<div class="node-statsMeta">
-<dl class="pairs pairs--inline">
-<dt>Threads</dt>
-<dd>215</dd>
-</dl>
-<dl class="pairs pairs--inline">
-<dt>Messages</dt>
-<dd>2,499</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="node-stats">
-<dl class="pairs pairs--rows">
-<dd>215</dd>
-<dt>Threads</dt>
-</dl>
-</div>
-<div class="node-extra">
-<div class="lastpost--avatar">
-<a href="/members/mclavasquad.5547/" class="avatar avatar--xs" data-user-id="5547" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/ee9d94b6-c742-4b85-8d70-35f123dba287?size=96" srcset="https://crafatar.com/avatars/ee9d94b6-c742-4b85-8d70-35f123dba287?size=96 2x" alt="McLavaSquad" class="avatar-u5547-s" />
-</a>
-</div>
-<div class="node-extra-row"><a href="/posts/51014/" class="node-extra-title" title="Application for the faction Mistique - Season 12">Application for the faction Mistique - Season 12</a></div>
-<div class="node-extra-row">
-<ul class="listInline listInline--bullet">
-<li><time class="node-extra-date u-dt" dir="auto" datetime="2018-12-14T23:14:47+0000" data-time="1544829287" data-date-string="Dec 14, 2018" data-time-string="11:14 PM" title="Dec 14, 2018 at 11:14 PM">11 minutes ago</time>
-<li class="node-extra-user"><a href="/members/mclavasquad.5547/" class="username " dir="auto" data-user-id="5547" data-xf-init="member-tooltip">McLavaSquad</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="node node--id9 node--depth2 node--forum node--unread">
-<div class="node-body">
-<span class="node-icon" aria-hidden="true"><i></i></span>
-<div class="node-main js-nodeMain">
-<h3 class="node-title">
-<a href="/forums/content-creations.9/" data-xf-init="" data-shortcut="node-description">Content Creations</a>
-<span class="node--newIndicator">New</span>
-</h3>
-<div class="node-description ">Use this sub forum to show off all of your creations, but no advertising other servers please!</div>
-<div class="node-meta">
-<div class="node-statsMeta">
-<dl class="pairs pairs--inline">
-<dt>Threads</dt>
-<dd>314</dd>
-</dl>
-<dl class="pairs pairs--inline">
-<dt>Messages</dt>
-<dd>2,860</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="node-stats">
-<dl class="pairs pairs--rows">
-<dd>314</dd>
-<dt>Threads</dt>
-</dl>
-</div>
-<div class="node-extra">
-<div class="lastpost--avatar">
-<a href="/members/marveldc.183/" class="avatar avatar--xs" data-user-id="183" data-xf-init="member-tooltip">
-<img src="/data/avatars/s/0/183.jpg?1540915657" srcset="/data/avatars/m/0/183.jpg?1540915657 2x" alt="MarvelDC" class="avatar-u183-s" />
-</a>
-</div>
-<div class="node-extra-row"><a href="/posts/51012/" class="node-extra-title" title="JACKS DRAWING!">JACKS DRAWING!</a></div>
-<div class="node-extra-row">
-<ul class="listInline listInline--bullet">
-<li><time class="node-extra-date u-dt" dir="auto" datetime="2018-12-14T23:08:34+0000" data-time="1544828914" data-date-string="Dec 14, 2018" data-time-string="11:08 PM" title="Dec 14, 2018 at 11:08 PM">18 minutes ago</time>
-<li class="node-extra-user"><a href="/members/marveldc.183/" class="username " dir="auto" data-user-id="183" data-xf-init="member-tooltip">MarvelDC</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="node node--id10 node--depth2 node--forum node--unread">
-<div class="node-body">
-<span class="node-icon" aria-hidden="true"><i></i></span>
-<div class="node-main js-nodeMain">
-<h3 class="node-title">
-<a href="/forums/skycade-discussion.10/" data-xf-init="" data-shortcut="node-description">Skycade Discussion</a>
-<span class="node--newIndicator">New</span>
-</h3>
-<div class="node-meta">
-<div class="node-statsMeta">
-<dl class="pairs pairs--inline">
-<dt>Threads</dt>
-<dd>1,193</dd>
-</dl>
-<dl class="pairs pairs--inline">
-<dt>Messages</dt>
-<dd>12,282</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="node-stats">
-<dl class="pairs pairs--rows">
-<dd>1,193</dd>
-<dt>Threads</dt>
-</dl>
-</div>
-<div class="node-extra">
-<div class="lastpost--avatar">
-<a href="/members/baseballty.982/" class="avatar avatar--xs" data-user-id="982" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/5591aaad-945c-411f-8384-84c86cb02cab?size=96" srcset="https://crafatar.com/avatars/5591aaad-945c-411f-8384-84c86cb02cab?size=96 2x" alt="baseballTY" class="avatar-u982-s" />
-</a>
-</div>
-<div class="node-extra-row"><a href="/posts/50993/" class="node-extra-title" title="List of the current staff members!">List of the current staff members!</a></div>
-<div class="node-extra-row">
-<ul class="listInline listInline--bullet">
-<li><time class="node-extra-date u-dt" dir="auto" datetime="2018-12-14T22:08:49+0000" data-time="1544825329" data-date-string="Dec 14, 2018" data-time-string="10:08 PM" title="Dec 14, 2018 at 10:08 PM">Today at 10:08 PM</time>
-<li class="node-extra-user"><a href="/members/baseballty.982/" class="username " dir="auto" data-user-id="982" data-xf-init="member-tooltip">baseballTY</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="node node--id16 node--depth2 node--forum node--unread">
-<div class="node-body">
-<span class="node-icon" aria-hidden="true"><i></i></span>
-<div class="node-main js-nodeMain">
-<h3 class="node-title">
-<a href="/forums/suggestions.16/" data-xf-init="" data-shortcut="node-description">Suggestions</a>
-<span class="node--newIndicator">New</span>
-</h3>
-<div class="node-meta">
-<div class="node-statsMeta">
-<dl class="pairs pairs--inline">
-<dt>Threads</dt>
-<dd>613</dd>
-</dl>
-<dl class="pairs pairs--inline">
-<dt>Messages</dt>
-<dd>5,399</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="node-stats">
-<dl class="pairs pairs--rows">
-<dd>613</dd>
-<dt>Threads</dt>
-</dl>
-</div>
-<div class="node-extra">
-<div class="lastpost--avatar">
-<a href="/members/1st_fallen_angel.5783/" class="avatar avatar--xs" data-user-id="5783" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/7e6afcc0-2ac2-4f0b-9d96-a2ccd288abd4?size=96" srcset="https://crafatar.com/avatars/7e6afcc0-2ac2-4f0b-9d96-a2ccd288abd4?size=96 2x" alt="1st_Fallen_Angel" class="avatar-u5783-s" />
-</a>
-</div>
-<div class="node-extra-row"><a href="/posts/51017/" class="node-extra-title" title="/Is Tc message has incorrect grammar.">/Is Tc message has incorrect grammar.</a></div>
-<div class="node-extra-row">
-<ul class="listInline listInline--bullet">
-<li><time class="node-extra-date u-dt" dir="auto" datetime="2018-12-14T23:21:12+0000" data-time="1544829672" data-date-string="Dec 14, 2018" data-time-string="11:21 PM" title="Dec 14, 2018 at 11:21 PM">5 minutes ago</time>
-<li class="node-extra-user"><a href="/members/1st_fallen_angel.5783/" class="username " dir="auto" data-user-id="5783" data-xf-init="member-tooltip">1st_Fallen_Angel</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="block block--category block--category11">
-<span class="u-anchorTarget" id="support.11"></span>
-<div class="block-container">
-<h2 class="block-header">
-<a href="/.#support.11">Support</a>
-<span id="collapse-11" class="collapseTrigger collapseTrigger--block  is-active" data-xf-click="toggle" data-xf-init="toggle-storage" data-storage-type="cookie" data-target=".block--category11 .block-body" data-storage-key="_node-11"></span>
-</h2>
-<div class="block-body block-body--collapsible  is-active">
-<div class="node node--id12 node--depth2 node--forum node--unread">
-<div class="node-body">
-<span class="node-icon" aria-hidden="true"><i></i></span>
-<div class="node-main js-nodeMain">
-<h3 class="node-title">
-<a href="/forums/bug-reports.12/" data-xf-init="" data-shortcut="node-description">Bug Reports</a>
-<span class="node--newIndicator">New</span>
-</h3>
-<div class="node-meta">
-<div class="node-statsMeta">
-<dl class="pairs pairs--inline">
-<dt>Threads</dt>
-<dd>617</dd>
-</dl>
-<dl class="pairs pairs--inline">
-<dt>Messages</dt>
-<dd>2,425</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="node-stats">
-<dl class="pairs pairs--rows">
-<dd>617</dd>
-<dt>Threads</dt>
-</dl>
-</div>
-<div class="node-extra">
-<div class="lastpost--avatar">
-<a href="/members/chefboyaredee.5853/" class="avatar avatar--xs" data-user-id="5853" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/d4d42edd-5f6e-4ad6-8f9b-46290eeb8588?size=96" srcset="https://crafatar.com/avatars/d4d42edd-5f6e-4ad6-8f9b-46290eeb8588?size=96 2x" alt="Chefboyaredee" class="avatar-u5853-s" />
-</a>
-</div>
-<div class="node-extra-row"><a href="/posts/51015/" class="node-extra-title" title="Skycade Down?">Skycade Down?</a></div>
-<div class="node-extra-row">
-<ul class="listInline listInline--bullet">
-<li><time class="node-extra-date u-dt" dir="auto" datetime="2018-12-14T23:18:34+0000" data-time="1544829514" data-date-string="Dec 14, 2018" data-time-string="11:18 PM" title="Dec 14, 2018 at 11:18 PM">8 minutes ago</time>
-<li class="node-extra-user"><a href="/members/chefboyaredee.5853/" class="username " dir="auto" data-user-id="5853" data-xf-init="member-tooltip">Chefboyaredee</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="node node--id13 node--depth2 node--forum node--unread">
-<div class="node-body">
-<span class="node-icon" aria-hidden="true"><i></i></span>
-<div class="node-main js-nodeMain">
-<h3 class="node-title">
-<a href="/forums/report-a-player.13/" data-xf-init="" data-shortcut="node-description">Report a Player</a>
-<span class="node--newIndicator">New</span>
-</h3>
-<div class="node-meta">
-<div class="node-statsMeta">
-<dl class="pairs pairs--inline">
-<dt>Threads</dt>
-<dd>6,212</dd>
-</dl>
-<dl class="pairs pairs--inline">
-<dt>Messages</dt>
-<dd>12,431</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="node-stats">
-<dl class="pairs pairs--rows">
-<dd>6,212</dd>
-<dt>Threads</dt>
-</dl>
-</div>
-<div class="node-extra">
-<div class="lastpost--avatar">
-<a href="/members/noskill.78/" class="avatar avatar--xs" data-user-id="78" data-xf-init="member-tooltip">
-<img src="/data/avatars/s/0/78.jpg?1541625933" srcset="/data/avatars/m/0/78.jpg?1541625933 2x" alt="NoSkill" class="avatar-u78-s" />
-</a>
-</div>
-<div class="node-extra-row"><a href="/posts/50991/" class="node-extra-title" title="fonts">fonts</a></div>
-<div class="node-extra-row">
-<ul class="listInline listInline--bullet">
-<li><time class="node-extra-date u-dt" dir="auto" datetime="2018-12-14T22:01:57+0000" data-time="1544824917" data-date-string="Dec 14, 2018" data-time-string="10:01 PM" title="Dec 14, 2018 at 10:01 PM">Today at 10:01 PM</time>
-<li class="node-extra-user"><a href="/members/noskill.78/" class="username " dir="auto" data-user-id="78" data-xf-init="member-tooltip">NoSkill</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="node node--id14 node--depth2 node--forum node--unread">
-<div class="node-body">
-<span class="node-icon" aria-hidden="true"><i></i></span>
-<div class="node-main js-nodeMain">
-<h3 class="node-title">
-<a href="/forums/appeal-a-punishment.14/" data-xf-init="" data-shortcut="node-description">Appeal a Punishment</a>
-<span class="node--newIndicator">New</span>
-</h3>
-<div class="node-meta">
-<div class="node-statsMeta">
-<dl class="pairs pairs--inline">
-<dt>Threads</dt>
-<dd>1,575</dd>
-</dl>
-<dl class="pairs pairs--inline">
-<dt>Messages</dt>
-<dd>3,215</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="node-stats">
-<dl class="pairs pairs--rows">
-<dd>1,575</dd>
-<dt>Threads</dt>
-</dl>
-</div>
-<div class="node-extra">
-<div class="lastpost--avatar">
-<a href="/members/kwuffin.1417/" class="avatar avatar--xs" data-user-id="1417" data-xf-init="member-tooltip">
-<img src="/data/avatars/s/1/1417.jpg?1544123806" srcset="/data/avatars/m/1/1417.jpg?1544123806 2x" alt="Kwuffin" class="avatar-u1417-s" />
-</a>
-</div>
-<div class="node-extra-row"><a href="/posts/51006/" class="node-extra-title" title="And another one">And another one</a></div>
-<div class="node-extra-row">
-<ul class="listInline listInline--bullet">
-<li><time class="node-extra-date u-dt" dir="auto" datetime="2018-12-14T22:48:44+0000" data-time="1544827724" data-date-string="Dec 14, 2018" data-time-string="10:48 PM" title="Dec 14, 2018 at 10:48 PM">37 minutes ago</time>
-<li class="node-extra-user"><a href="/members/kwuffin.1417/" class="username " dir="auto" data-user-id="1417" data-xf-init="member-tooltip">Kwuffin</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="p-body-sidebar is-active">
-<div class="block" data-widget-section="onlineNow" data-widget-id="6" data-widget-key="forum_overview_members_online" data-widget-definition="members_online">
-<div class="block-container">
-<h3 class="block-minorHeader"><a href="/online/">Members online</a></h3>
-<div class="block-body">
-<div class="block-row block-row--minor">
-<ul class="listInline listInline--comma">
-<li><a href="/members/1st_fallen_angel.5783/" class="username " dir="auto" data-user-id="5783" data-xf-init="member-tooltip">1st_Fallen_Angel</a></li><li><a href="/members/gothicgamer2012.3603/" class="username " dir="auto" data-user-id="3603" data-xf-init="member-tooltip">GothicGamer2012</a></li><li><a href="/members/chefboyaredee.5853/" class="username " dir="auto" data-user-id="5853" data-xf-init="member-tooltip">Chefboyaredee</a></li><li><a href="/members/dylancats.5755/" class="username " dir="auto" data-user-id="5755" data-xf-init="member-tooltip">Dylancats</a></li><li><a href="/members/thomas-chachi.1488/" class="username " dir="auto" data-user-id="1488" data-xf-init="member-tooltip">Thomas Chachi</a></li><li><a href="/members/acidraid.106/" class="username " dir="auto" data-user-id="106" data-xf-init="member-tooltip">acidraid</a></li><li><a href="/members/digitaldescent-mcways05.2170/" class="username " dir="auto" data-user-id="2170" data-xf-init="member-tooltip">DigitalDescent / mcways05</a></li><li><a href="/members/evence.113/" class="username " dir="auto" data-user-id="113" data-xf-init="member-tooltip">Evence</a></li><li><a href="/members/devillunitic.5697/" class="username " dir="auto" data-user-id="5697" data-xf-init="member-tooltip">DevilLunitic</a></li><li><a href="/members/worv.5824/" class="username " dir="auto" data-user-id="5824" data-xf-init="member-tooltip">Worv</a></li><li><a href="/members/pv42865.5374/" class="username " dir="auto" data-user-id="5374" data-xf-init="member-tooltip">pv42865</a></li><li><a href="/members/dabondatcheese.279/" class="username " dir="auto" data-user-id="279" data-xf-init="member-tooltip">DabOnDatCheese</a></li><li><a href="/members/duckowap.259/" class="username " dir="auto" data-user-id="259" data-xf-init="member-tooltip">Duckowap</a></li><li><a href="/members/shaking.5880/" class="username " dir="auto" data-user-id="5880" data-xf-init="member-tooltip">Shaking</a></li><li><a href="/members/mrswalbert.681/" class="username " dir="auto" data-user-id="681" data-xf-init="member-tooltip">MrSwalbert</a></li><li><a href="/members/clanmitchell.415/" class="username " dir="auto" data-user-id="415" data-xf-init="member-tooltip">ClanMitchell</a></li><li><a href="/members/fancy_dinners_.840/" class="username " dir="auto" data-user-id="840" data-xf-init="member-tooltip">Fancy_Dinners_</a></li><li><a href="/members/shepardsheep.3284/" class="username " dir="auto" data-user-id="3284" data-xf-init="member-tooltip">ShepardSheep</a></li><li><a href="/members/tutionaldigi.2746/" class="username " dir="auto" data-user-id="2746" data-xf-init="member-tooltip">TutionalDigi</a></li><li><a href="/members/electricharmony.58/" class="username " dir="auto" data-user-id="58" data-xf-init="member-tooltip">ElectricHarmony</a></li><li><a href="/members/fireninja1875.3050/" class="username " dir="auto" data-user-id="3050" data-xf-init="member-tooltip">fireninja1875</a></li><li><a href="/members/hellonate_.3804/" class="username " dir="auto" data-user-id="3804" data-xf-init="member-tooltip">HelloNate_</a></li><li><a href="/members/mclavasquad.5547/" class="username " dir="auto" data-user-id="5547" data-xf-init="member-tooltip">McLavaSquad</a></li><li><a href="/members/br0wsky.4948/" class="username " dir="auto" data-user-id="4948" data-xf-init="member-tooltip">Br0wsky</a></li><li><a href="/members/deltablade.92/" class="username " dir="auto" data-user-id="92" data-xf-init="member-tooltip">DeltaBlade</a></li><li><a href="/members/iispace.68/" class="username " dir="auto" data-user-id="68" data-xf-init="member-tooltip">iiSpace</a></li>
-</ul>
-</div>
-</div>
-<div class="block-footer">
-<span class="block-footer-counter">Total:&nbsp;96 (members:&nbsp;26, guests:&nbsp;70)</span>
-</div>
-</div>
-</div>
-<div class="block" data-widget-id="7" data-widget-key="forum_overview_new_posts" data-widget-definition="new_posts">
-<div class="block-container">
-<h3 class="block-minorHeader">
-<a href="/whats-new/posts/?skip=1" rel="nofollow">Latest posts</a>
-</h3>
-<ul class="block-body">
-<li class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/1st_fallen_angel.5783/" class="avatar avatar--xxs" data-user-id="5783" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/7e6afcc0-2ac2-4f0b-9d96-a2ccd288abd4?size=48" srcset="https://crafatar.com/avatars/7e6afcc0-2ac2-4f0b-9d96-a2ccd288abd4?size=48 2x" alt="1st_Fallen_Angel" class="avatar-u5783-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<a href="/threads/98hpui.12444/post-51019">98hpui</a>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<ul class="listInline listInline--bullet">
-<li>Latest: 1st_Fallen_Angel</li>
-<li><time class="u-dt" dir="auto" datetime="2018-12-14T23:26:02+0000" data-time="1544829962" data-date-string="Dec 14, 2018" data-time-string="11:26 PM" title="Dec 14, 2018 at 11:26 PM">A moment ago</time></li>
-</ul>
-</div>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<a href="/forums/introduce-yourself.7/">Introduce Yourself</a>
-</div>
-</div>
-</div>
-</li>
-<li class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/dabondatcheese.279/" class="avatar avatar--xxs" data-user-id="279" data-xf-init="member-tooltip">
-<img src="/data/avatars/s/0/279.jpg?1533765544" alt="DabOnDatCheese" class="avatar-u279-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<a href="/threads/hi-im-demoted.12498/post-51018">hi im demoted</a>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<ul class="listInline listInline--bullet">
-<li>Latest: DabOnDatCheese</li>
-<li><time class="u-dt" dir="auto" datetime="2018-12-14T23:21:15+0000" data-time="1544829675" data-date-string="Dec 14, 2018" data-time-string="11:21 PM" title="Dec 14, 2018 at 11:21 PM">5 minutes ago</time></li>
-</ul>
-</div>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<a href="/forums/introduce-yourself.7/">Introduce Yourself</a>
-</div>
-</div>
-</div>
-</li>
-<li class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/1st_fallen_angel.5783/" class="avatar avatar--xxs" data-user-id="5783" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/7e6afcc0-2ac2-4f0b-9d96-a2ccd288abd4?size=48" srcset="https://crafatar.com/avatars/7e6afcc0-2ac2-4f0b-9d96-a2ccd288abd4?size=48 2x" alt="1st_Fallen_Angel" class="avatar-u5783-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<a href="/threads/is-tc-message-has-incorrect-grammar.12461/post-51017">/Is Tc message has incorrect grammar.</a>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<ul class="listInline listInline--bullet">
-<li>Latest: 1st_Fallen_Angel</li>
-<li><time class="u-dt" dir="auto" datetime="2018-12-14T23:21:12+0000" data-time="1544829672" data-date-string="Dec 14, 2018" data-time-string="11:21 PM" title="Dec 14, 2018 at 11:21 PM">5 minutes ago</time></li>
-</ul>
-</div>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<a href="/forums/suggestions.16/">Suggestions</a>
-</div>
-</div>
-</div>
-</li>
-<li class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/chefboyaredee.5853/" class="avatar avatar--xxs" data-user-id="5853" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/d4d42edd-5f6e-4ad6-8f9b-46290eeb8588?size=48" srcset="https://crafatar.com/avatars/d4d42edd-5f6e-4ad6-8f9b-46290eeb8588?size=48 2x" alt="Chefboyaredee" class="avatar-u5853-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<a href="/threads/skycade-down.12529/post-51015">Skycade Down?</a>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<ul class="listInline listInline--bullet">
-<li>Latest: Chefboyaredee</li>
-<li><time class="u-dt" dir="auto" datetime="2018-12-14T23:18:34+0000" data-time="1544829514" data-date-string="Dec 14, 2018" data-time-string="11:18 PM" title="Dec 14, 2018 at 11:18 PM">8 minutes ago</time></li>
-</ul>
-</div>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<a href="/forums/bug-reports.12/">Bug Reports</a>
-</div>
-</div>
-</div>
-</li>
-<li class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/mclavasquad.5547/" class="avatar avatar--xxs" data-user-id="5547" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/ee9d94b6-c742-4b85-8d70-35f123dba287?size=48" srcset="https://crafatar.com/avatars/ee9d94b6-c742-4b85-8d70-35f123dba287?size=48 2x" alt="McLavaSquad" class="avatar-u5547-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<a href="/threads/application-for-the-faction-mistique-season-12.12201/post-51014">Application for the faction Mistique - Season 12</a>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<ul class="listInline listInline--bullet">
-<li>Latest: McLavaSquad</li>
-<li><time class="u-dt" dir="auto" datetime="2018-12-14T23:14:47+0000" data-time="1544829287" data-date-string="Dec 14, 2018" data-time-string="11:14 PM" title="Dec 14, 2018 at 11:14 PM">11 minutes ago</time></li>
-</ul>
-</div>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<a href="/forums/recruitment.8/">Recruitment</a>
-</div>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="block" data-widget-id="8" data-widget-key="forum_overview_new_profile_posts" data-widget-definition="new_profile_posts">
-<div class="block-container">
-<h3 class="block-minorHeader">
-<a href="/whats-new/profile-posts/?skip=1" rel="nofollow">Latest profile posts</a>
-</h3>
-<div class="block-body js-replyNewMessageContainer">
-<div class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/shepardsheep.3284/" class="avatar avatar--xxs" data-user-id="3284" data-xf-init="member-tooltip">
-<img src="/data/avatars/s/3/3284.jpg?1543212609" alt="ShepardSheep" class="avatar-u3284-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<div class="contentRow-lesser">
-<a href="/members/shepardsheep.3284/" class="username " dir="auto" data-user-id="3284" data-xf-init="member-tooltip">ShepardSheep</a>
-</div>
-<div class="contentRow-faderContainer">
-<div class="contentRow-faderContent">
--sighs- hELLOOOOOOOOO <br />
-im upset cause i can&#039;t write a 5-6 page damn hero&#039;s journey story to save my life.
-</div>
-<div class="contentRow-fader"></div>
-</div>
-<div class="contentRow-minor">
-<a href="/profile-posts/4172/" rel="nofollow" class="u-concealed"><time class="u-dt" dir="auto" datetime="2018-12-14T22:20:21+0000" data-time="1544826021" data-date-string="Dec 14, 2018" data-time-string="10:20 PM" title="Dec 14, 2018 at 10:20 PM">Today at 10:20 PM</time></a>
-<a href="/profile-posts/4172/" rel="nofollow" class="contentRow-extra" data-xf-click="overlay" data-xf-init="tooltip" title="Interact">&#8226;&#8226;&#8226;</a>
-</div>
-</div>
-</div>
+        </nav>
+        <nav class="Mobile-overlay-nav Mobile-overlay-nav--secondary" data-content-field="navigation">
+          
+        </nav>
+      </div>
+      <div class="Mobile-overlay-folders" data-content-field="navigation">
+        
+  
+
+        
+      </div>
+    </div>
+    <button class="Mobile-overlay-close" data-controller="MobileOverlayToggle">
+      <svg class="Icon Icon--close" viewBox="0 0 16 16">
+        <use xlink:href="/assets/ui-icons.svg#close-icon"></use>
+      </svg>
+    </button>
+    <div class="Mobile-overlay-back" data-controller="MobileOverlayToggle"></div>
+  </div>
 </div>
 
-<div class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/exua.5537/" class="avatar avatar--xxs" data-user-id="5537" data-xf-init="member-tooltip">
-<img src="/data/avatars/s/5/5537.jpg?1544496861" alt="Exua" class="avatar-u5537-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<div class="contentRow-lesser">
-<a href="/members/exua.5537/" class="username " dir="auto" data-user-id="5537" data-xf-init="member-tooltip">Exua</a>
-</div>
-<div class="contentRow-faderContainer">
-<div class="contentRow-faderContent">
-hour ago
-</div>
-<div class="contentRow-fader"></div>
-</div>
-<div class="contentRow-minor">
-<a href="/profile-posts/4171/" rel="nofollow" class="u-concealed"><time class="u-dt" dir="auto" datetime="2018-12-14T21:25:28+0000" data-time="1544822728" data-date-string="Dec 14, 2018" data-time-string="9:25 PM" title="Dec 14, 2018 at 9:25 PM">Today at 9:25 PM</time></a>
-<a href="/profile-posts/4171/" rel="nofollow" class="contentRow-extra" data-xf-click="overlay" data-xf-init="tooltip" title="Interact">&#8226;&#8226;&#8226;</a>
-</div>
-</div>
-</div>
-</div>
-<div class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/exua.5537/" class="avatar avatar--xxs" data-user-id="5537" data-xf-init="member-tooltip">
-<img src="/data/avatars/s/5/5537.jpg?1544496861" alt="Exua" class="avatar-u5537-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<div class="contentRow-lesser">
-<a href="/members/exua.5537/" class="username " dir="auto" data-user-id="5537" data-xf-init="member-tooltip">Exua</a>
-</div>
-<div class="contentRow-faderContainer">
-<div class="contentRow-faderContent">
-aye mate got my drawing tablet
-</div>
-<div class="contentRow-fader"></div>
-</div>
-<div class="contentRow-minor">
-<a href="/profile-posts/4170/" rel="nofollow" class="u-concealed"><time class="u-dt" dir="auto" datetime="2018-12-14T21:24:34+0000" data-time="1544822674" data-date-string="Dec 14, 2018" data-time-string="9:24 PM" title="Dec 14, 2018 at 9:24 PM">Today at 9:24 PM</time></a>
-<a href="/profile-posts/4170/" rel="nofollow" class="contentRow-extra" data-xf-click="overlay" data-xf-init="tooltip" title="Interact">&#8226;&#8226;&#8226;</a>
-</div>
-</div>
-</div>
-</div>
-<div class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/orangefishinc.5573/" class="avatar avatar--xxs" data-user-id="5573" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/edab81b3-30e2-4300-abfc-94569f2e2ce8?size=48" srcset="https://crafatar.com/avatars/edab81b3-30e2-4300-abfc-94569f2e2ce8?size=48 2x" alt="orangefishinc" class="avatar-u5573-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<div class="contentRow-lesser">
-<a href="/members/orangefishinc.5573/" class="username " dir="auto" data-user-id="5573" data-xf-init="member-tooltip" aria-hidden="true">orangefishinc</a>
-<i class="fa fa-caret-right u-muted" aria-hidden="true"></i>
-<a href="/members/jack.4/" class="username " dir="auto" data-user-id="4" data-xf-init="member-tooltip" aria-hidden="true">Jack</a>
-<span class="u-srOnly">orangefishinc wrote on Jack's profile.</span>
-</div>
-<div class="contentRow-faderContainer">
-<div class="contentRow-faderContent">
-Jack you need to do more one life weeks i love them.
-</div>
-<div class="contentRow-fader"></div>
-</div>
-<div class="contentRow-minor">
-<a href="/profile-posts/4169/" rel="nofollow" class="u-concealed"><time class="u-dt" dir="auto" datetime="2018-12-14T20:38:08+0000" data-time="1544819888" data-date-string="Dec 14, 2018" data-time-string="8:38 PM" title="Dec 14, 2018 at 8:38 PM">Today at 8:38 PM</time></a>
-<a href="/profile-posts/4169/" rel="nofollow" class="contentRow-extra" data-xf-click="overlay" data-xf-init="tooltip" title="Interact">&#8226;&#8226;&#8226;</a>
-</div>
-</div>
-</div>
-</div>
-<div class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/cloud.4693/" class="avatar avatar--xxs" data-user-id="4693" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/8f7a5564-4efe-4ff8-9ff3-02fc96fefdff?size=48" srcset="https://crafatar.com/avatars/8f7a5564-4efe-4ff8-9ff3-02fc96fefdff?size=48 2x" alt="Cloud" class="avatar-u4693-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<div class="contentRow-lesser">
-<a href="/members/cloud.4693/" class="username " dir="auto" data-user-id="4693" data-xf-init="member-tooltip">Cloud</a>
-</div>
-<div class="contentRow-faderContainer">
-<div class="contentRow-faderContent">
-Who else is sad,?
-</div>
-<div class="contentRow-fader"></div>
-</div>
-<div class="contentRow-minor">
-<a href="/profile-posts/4168/" rel="nofollow" class="u-concealed"><time class="u-dt" dir="auto" datetime="2018-12-14T17:27:19+0000" data-time="1544808439" data-date-string="Dec 14, 2018" data-time-string="5:27 PM" title="Dec 14, 2018 at 5:27 PM">Today at 5:27 PM</time></a>
-<a href="/profile-posts/4168/" rel="nofollow" class="contentRow-extra" data-xf-click="overlay" data-xf-init="tooltip" title="Interact">&#8226;&#8226;&#8226;</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="block" data-widget-id="9" data-widget-key="forum_overview_forum_statistics" data-widget-definition="forum_statistics">
-<div class="block-container">
-<h3 class="block-minorHeader">Forum statistics</h3>
-<div class="block-body block-row">
-<dl class="pairs pairs--justified">
-<dt>Threads</dt>
-<dd>11,602</dd>
-</dl>
-<dl class="pairs pairs--justified">
-<dt>Messages</dt>
-<dd>47,263</dd>
-</dl>
-<dl class="pairs pairs--justified">
-<dt>Members</dt>
-<dd>5,933</dd>
-</dl>
-<dl class="pairs pairs--justified">
-<dt>Latest member</dt>
-<dd><a href="/members/paleontologists.6039/" class="username " dir="auto" data-user-id="6039" data-xf-init="member-tooltip">paleontologists</a></dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="block" data-widget-id="10" data-widget-key="forum_overview_share_page" data-widget-definition="share_page">
-<div class="block-container">
-<h3 class="block-minorHeader">Share this page</h3>
-<div class="block-body block-row">
-<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons">
-<a class="shareButtons-button shareButtons-button--facebook" data-href="https://www.facebook.com/sharer.php?u={url}">
-<i aria-hidden="true"></i>
-<span>Facebook</span>
-</a>
-<a class="shareButtons-button shareButtons-button--twitter" data-href="https://twitter.com/intent/tweet?url={url}&amp;text={title}">
-<i aria-hidden="true"></i>
-<span>Twitter</span>
-</a>
-<a class="shareButtons-button shareButtons-button--gplus" data-href="https://plus.google.com/share?url={url}">
-<i aria-hidden="true"></i>
-<span>Google+</span>
-</a>
-<a class="shareButtons-button shareButtons-button--reddit" data-href="https://reddit.com/submit?url={url}&amp;title={title}">
-<i aria-hidden="true"></i>
-<span>Reddit</span>
-</a>
-<a class="shareButtons-button shareButtons-button--pinterest" data-href="https://pinterest.com/pin/create/bookmarklet/?url={url}&amp;description={title}">
-<i></i>
-<span>Pinterest</span>
-</a>
-<a class="shareButtons-button shareButtons-button--tumblr" data-href="https://www.tumblr.com/widgets/share/tool?canonicalUrl={url}&amp;title={title}">
-<i></i>
-<span>Tumblr</span>
-</a>
-<a class="shareButtons-button shareButtons-button--whatsApp" data-href="https://api.whatsapp.com/send?text={title}&nbsp;{url}">
-<i></i>
-<span>WhatsApp</span>
-</a>
-<a class="shareButtons-button shareButtons-button--email" data-href="mailto:?subject={title}&amp;body={url}">
-<i></i>
-<span>Email</span>
-</a>
-<a class="shareButtons-button shareButtons-button--link is-hidden" data-clipboard="{url}">
-<i></i>
-<span>Link</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<ul class="p-breadcrumbs p-breadcrumbs--bottom" itemscope itemtype="https://schema.org/BreadcrumbList">
-<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-<a href="https://skycade.net" itemprop="item">
-<span itemprop="name">Home</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-<div class="pre-footer">
-<div class="pre-footer-inner">
-<div class="pre-footer--column">
-<div class="pre-footer--container">
-<div class="block" data-widget-id="3" data-widget-key="online_list_online_statistics" data-widget-definition="online_statistics">
-<div class="block-container">
-<h3 class="block-minorHeader">Online statistics</h3>
-<div class="block-body block-row">
-<dl class="pairs pairs--justified">
-<dt>Members online</dt>
-<dd>26</dd>
-</dl>
-<dl class="pairs pairs--justified">
-<dt>Guests online</dt>
-<dd>70</dd>
-</dl>
-<dl class="pairs pairs--justified">
-<dt>Total visitors</dt>
-<dd>96</dd>
-</dl>
-</div>
-<div class="block-footer">
-Totals may include hidden visitors.
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="pre-footer--column">
-<div class="pre-footer--container">
-<div class="block" data-widget-id="7" data-widget-key="forum_overview_new_posts" data-widget-definition="new_posts">
-<div class="block-container">
-<h3 class="block-minorHeader">
-<a href="/whats-new/posts/?skip=1" rel="nofollow">Latest posts</a>
-</h3>
-<ul class="block-body">
-<li class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/1st_fallen_angel.5783/" class="avatar avatar--xxs" data-user-id="5783" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/7e6afcc0-2ac2-4f0b-9d96-a2ccd288abd4?size=48" srcset="https://crafatar.com/avatars/7e6afcc0-2ac2-4f0b-9d96-a2ccd288abd4?size=48 2x" alt="1st_Fallen_Angel" class="avatar-u5783-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<a href="/threads/98hpui.12444/post-51019">98hpui</a>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<ul class="listInline listInline--bullet">
-<li>Latest: 1st_Fallen_Angel</li>
-<li><time class="u-dt" dir="auto" datetime="2018-12-14T23:26:02+0000" data-time="1544829962" data-date-string="Dec 14, 2018" data-time-string="11:26 PM" title="Dec 14, 2018 at 11:26 PM">A moment ago</time></li>
-</ul>
-</div>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<a href="/forums/introduce-yourself.7/">Introduce Yourself</a>
-</div>
-</div>
-</div>
-</li>
-<li class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/dabondatcheese.279/" class="avatar avatar--xxs" data-user-id="279" data-xf-init="member-tooltip">
-<img src="/data/avatars/s/0/279.jpg?1533765544" alt="DabOnDatCheese" class="avatar-u279-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<a href="/threads/hi-im-demoted.12498/post-51018">hi im demoted</a>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<ul class="listInline listInline--bullet">
-<li>Latest: DabOnDatCheese</li>
-<li><time class="u-dt" dir="auto" datetime="2018-12-14T23:21:15+0000" data-time="1544829675" data-date-string="Dec 14, 2018" data-time-string="11:21 PM" title="Dec 14, 2018 at 11:21 PM">5 minutes ago</time></li>
-</ul>
-</div>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<a href="/forums/introduce-yourself.7/">Introduce Yourself</a>
-</div>
-</div>
-</div>
-</li>
-<li class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/1st_fallen_angel.5783/" class="avatar avatar--xxs" data-user-id="5783" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/7e6afcc0-2ac2-4f0b-9d96-a2ccd288abd4?size=48" srcset="https://crafatar.com/avatars/7e6afcc0-2ac2-4f0b-9d96-a2ccd288abd4?size=48 2x" alt="1st_Fallen_Angel" class="avatar-u5783-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<a href="/threads/is-tc-message-has-incorrect-grammar.12461/post-51017">/Is Tc message has incorrect grammar.</a>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<ul class="listInline listInline--bullet">
-<li>Latest: 1st_Fallen_Angel</li>
-<li><time class="u-dt" dir="auto" datetime="2018-12-14T23:21:12+0000" data-time="1544829672" data-date-string="Dec 14, 2018" data-time-string="11:21 PM" title="Dec 14, 2018 at 11:21 PM">5 minutes ago</time></li>
-</ul>
-</div>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<a href="/forums/suggestions.16/">Suggestions</a>
-</div>
-</div>
-</div>
-</li>
-<li class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/chefboyaredee.5853/" class="avatar avatar--xxs" data-user-id="5853" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/d4d42edd-5f6e-4ad6-8f9b-46290eeb8588?size=48" srcset="https://crafatar.com/avatars/d4d42edd-5f6e-4ad6-8f9b-46290eeb8588?size=48 2x" alt="Chefboyaredee" class="avatar-u5853-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<a href="/threads/skycade-down.12529/post-51015">Skycade Down?</a>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<ul class="listInline listInline--bullet">
-<li>Latest: Chefboyaredee</li>
-<li><time class="u-dt" dir="auto" datetime="2018-12-14T23:18:34+0000" data-time="1544829514" data-date-string="Dec 14, 2018" data-time-string="11:18 PM" title="Dec 14, 2018 at 11:18 PM">8 minutes ago</time></li>
-</ul>
-</div>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<a href="/forums/bug-reports.12/">Bug Reports</a>
-</div>
-</div>
-</div>
-</li>
-<li class="block-row">
-<div class="contentRow">
-<div class="contentRow-figure">
-<a href="/members/mclavasquad.5547/" class="avatar avatar--xxs" data-user-id="5547" data-xf-init="member-tooltip">
-<img src="https://crafatar.com/avatars/ee9d94b6-c742-4b85-8d70-35f123dba287?size=48" srcset="https://crafatar.com/avatars/ee9d94b6-c742-4b85-8d70-35f123dba287?size=48 2x" alt="McLavaSquad" class="avatar-u5547-s" />
-</a>
-</div>
-<div class="contentRow-main contentRow-main--close">
-<a href="/threads/application-for-the-faction-mistique-season-12.12201/post-51014">Application for the faction Mistique - Season 12</a>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<ul class="listInline listInline--bullet">
-<li>Latest: McLavaSquad</li>
-<li><time class="u-dt" dir="auto" datetime="2018-12-14T23:14:47+0000" data-time="1544829287" data-date-string="Dec 14, 2018" data-time-string="11:14 PM" title="Dec 14, 2018 at 11:14 PM">11 minutes ago</time></li>
-</ul>
-</div>
-<div class="contentRow-minor contentRow-minor--hideLinks">
-<a href="/forums/recruitment.8/">Recruitment</a>
-</div>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="pre-footer--column">
-<div class="pre-footer--container">
-<div class="block" data-widget-id="2" data-widget-key="member_wrapper_newest_members" data-widget-definition="newest_members">
-<div class="block-container">
-<h3 class="block-minorHeader">Newest members</h3>
-<div class="block-body block-row">
-<ul class="listHeap">
-<li>
-<a href="/members/paleontologists.6039/" class="avatar avatar--s" data-user-id="6039" data-xf-init="member-tooltip" img="true">
-<img src="https://crafatar.com/avatars/1ccd56f5-499f-4f17-9933-7059f9cee006?size=96" srcset="https://crafatar.com/avatars/1ccd56f5-499f-4f17-9933-7059f9cee006?size=96 2x" alt="paleontologists" class="avatar-u6039-s" />
-</a>
-</li>
-<li>
-<a href="/members/benniegamesyt.6038/" class="avatar avatar--s" data-user-id="6038" data-xf-init="member-tooltip" img="true">
-<img src="https://crafatar.com/avatars/44bb8db7-f4be-46c6-b045-0e590ad0ba34?size=96" srcset="https://crafatar.com/avatars/44bb8db7-f4be-46c6-b045-0e590ad0ba34?size=96 2x" alt="BenniegamesYT" class="avatar-u6038-s" />
-</a>
-</li>
-<li>
-<a href="/members/appeartofear.6037/" class="avatar avatar--s" data-user-id="6037" data-xf-init="member-tooltip" img="true">
-<img src="https://crafatar.com/avatars/b44591a9-fa41-412b-b38c-57ebeb886786?size=96" srcset="https://crafatar.com/avatars/b44591a9-fa41-412b-b38c-57ebeb886786?size=96 2x" alt="AppearToFear" class="avatar-u6037-s" />
-</a>
-</li>
-<li>
-<a href="/members/isolatedd.6036/" class="avatar avatar--s" data-user-id="6036" data-xf-init="member-tooltip" img="true">
-<img src="https://crafatar.com/avatars/a855514a-d1ff-48de-9044-a53be2f981fe?size=96" srcset="https://crafatar.com/avatars/a855514a-d1ff-48de-9044-a53be2f981fe?size=96 2x" alt="isolatedd" class="avatar-u6036-s" />
-</a>
-</li>
-<li>
-<a href="/members/carbangul.6035/" class="avatar avatar--s" data-user-id="6035" data-xf-init="member-tooltip" img="true">
-<img src="https://crafatar.com/avatars/9485e39d-a34b-4e54-a921-5f7bbe3e8e6a?size=96" srcset="https://crafatar.com/avatars/9485e39d-a34b-4e54-a921-5f7bbe3e8e6a?size=96 2x" alt="carbangul" class="avatar-u6035-s" />
-</a>
-</li>
-<li>
-<a href="/members/enderseth.6034/" class="avatar avatar--s" data-user-id="6034" data-xf-init="member-tooltip" img="true">
-<img src="https://crafatar.com/avatars/4d919b47-7d06-456a-a1ee-43a2d10ab891?size=96" srcset="https://crafatar.com/avatars/4d919b47-7d06-456a-a1ee-43a2d10ab891?size=96 2x" alt="ENDERSETH" class="avatar-u6034-s" />
-</a>
-</li>
-<li>
-<a href="/members/bigdaddyjorr.6033/" class="avatar avatar--s" data-user-id="6033" data-xf-init="member-tooltip" img="true">
-<img src="https://crafatar.com/avatars/89fc9a9c-970b-44ff-9942-5b0ffd725dab?size=96" srcset="https://crafatar.com/avatars/89fc9a9c-970b-44ff-9942-5b0ffd725dab?size=96 2x" alt="BigDaddyJorr" class="avatar-u6033-s" />
-</a>
-</li>
-<li>
-<a href="/members/root_amor.6032/" class="avatar avatar--s" data-user-id="6032" data-xf-init="member-tooltip" img="true">
-<img src="https://crafatar.com/avatars/a330757d-db20-4b6a-b154-f6c8b28b03f1?size=96" srcset="https://crafatar.com/avatars/a330757d-db20-4b6a-b154-f6c8b28b03f1?size=96 2x" alt="Root_Amor" class="avatar-u6032-s" />
-</a>
-</li>
-<li>
-<a href="/members/samfromtfm.6031/" class="avatar avatar--s" data-user-id="6031" data-xf-init="member-tooltip" img="true">
-<img src="https://crafatar.com/avatars/4ad72913-c2aa-4db9-ae37-02afa6adacfa?size=96" srcset="https://crafatar.com/avatars/4ad72913-c2aa-4db9-ae37-02afa6adacfa?size=96 2x" alt="SamFromTFM" class="avatar-u6031-s" />
-</a>
-</li>
-<li>
-<a href="/members/fluffymossy.6030/" class="avatar avatar--s" data-user-id="6030" data-xf-init="member-tooltip" img="true">
-<img src="https://crafatar.com/avatars/308c5311-f5a3-4512-8f12-81ceaa635140?size=96" srcset="https://crafatar.com/avatars/308c5311-f5a3-4512-8f12-81ceaa635140?size=96 2x" alt="Fluffymossy" class="avatar-u6030-s" />
-</a>
-</li>
-<li>
-<a href="/members/smash7622.6029/" class="avatar avatar--s" data-user-id="6029" data-xf-init="member-tooltip" img="true"> 
-<img src="https://crafatar.com/avatars/3fa4983a-6476-48b1-a5b0-a9ec0898faf9?size=96" srcset="https://crafatar.com/avatars/3fa4983a-6476-48b1-a5b0-a9ec0898faf9?size=96 2x" alt="smash7622" class="avatar-u6029-s" />
-</a>
-</li>
-<li>
-<a href="/members/it-might-be-zack.6028/" class="avatar avatar--s" data-user-id="6028" data-xf-init="member-tooltip" img="true">
-<img src="https://crafatar.com/avatars/79ea9d90-337d-47d0-8313-90ce6d8efc36?size=96" srcset="https://crafatar.com/avatars/79ea9d90-337d-47d0-8313-90ce6d8efc36?size=96 2x" alt="It Might Be Zack" class="avatar-u6028-s" />
-</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="pre-footer--column">
-<div class="pre-footer--container">
-<div class="pre-footer--content">
-<h3>Stay Connected</h3>
-<ul class="pre-footer--social">
-<li><a href="https://twitter.com/playskycade" class="-twitter"><i class="fa fa-twitter"></i></a></li>
-<li><a href="https://www.youtube.com/user/JackSucksAtMinecraft" class="-youtube"><i class="fa fa-youtube-play"></i></a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<footer class="p-footer" id="footer">
-<div class="p-footer-inner">
-<div class="p-footer-row">
-<div class="p-footer-row-opposite">
-<div class="p-footer-copyright">
-<a href="https://xenforo.com" class="u-concealed" dir="ltr" target="_blank">Forum software by XenForo&trade; <span class="copyright">&copy; 2010-2018 XenForo Ltd.</span></a>
-<br>
-<a href="https://nanocode.io" class="u-concealed" dir="ltr">Minecraft-XenForo sync (MineSync) by nanocode <span class="copyright">&copy; 2018</span></a>
-<span class="thBranding"> | <a href="https://www.themehouse.com/?utm_source=forums.skycade.net&utm_medium=xf2product&utm_campaign=product_branding" class="u-concealed" target="_BLANK" nofollow="nofollow">Add-ons by ThemeHouse</a></span>
-<br />
-Style Made By: <a href="http://www.dohtheme.com">DohTheme</a>
-</div>
-</div>
-</div>
-</div>
+
+    <div class="Parallax-host-outer">
+      <div class="Parallax-host" data-parallax-host>
+        
+          
+            
+              
+              
+                
+                  <div class="Parallax-item" data-parallax-item data-parallax-id="5c0d777c758d469c14856a4c"></div>
+                
+              
+            
+              
+              
+                
+              
+            
+              
+              
+                
+              
+            
+              
+              
+                
+              
+            
+          
+        
+      </div>
+    </div>
+
+    <div class="Site" data-nc-base="header" data-controller="AncillaryLayout">
+      <div class="sqs-announcement-bar-dropzone"></div>
+
+      <header class="Header Header--top">
+        <div class="Header-inner Header-inner--top" data-nc-group="top">
+          <div data-nc-container="top-left">
+
+            <div class="Header-search" data-nc-element="search">
+              <form class="Header-search-form" action="/search" method="get">
+                <input class="Header-search-form-input" name="q" type="text" spellcheck="false" value="" autocomplete="off" placeholder="Search" />
+                <button class="Header-search-form-submit" type="submit" data-test="template-search">
+                  <svg class="Icon Icon--search--small" viewBox="0 0 15 15">
+                    <use xlink:href="/assets/ui-icons.svg#search-icon--small"></use>
+                  </svg>
+                  <svg class="Icon Icon--search" viewBox="0 0 20 20">
+                    <use xlink:href="/assets/ui-icons.svg#search-icon"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+
+          </div>
+          <div data-nc-container="top-center">
+            
+            
+              <div class="Header-social" data-nc-element="social">
+                
+  <nav class="SocialLinks" data-content-field="connected-accounts">
+    <div class="SocialLinks-inner">
+    <a href="https://twitter.com/TheReaperHCF" target="_blank" class="SocialLinks-link twitter" style="">
+        <div>
+          <svg class="SocialLinks-link-svg" viewBox="0 0 64 64">
+            
+            <use class="SocialLinks-link-icon" xlink:href="#twitter-icon"></use>
+            <use class="SocialLinks-link-mask" xlink:href="#twitter-mask"></use>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </nav>
+
+              </div>
+            
+          </div>
+          <div data-nc-container="top-right">
+
+            
+
+          </div>
+        </div>
+      </header>
+
+      <div class="Site-inner Site-inner--index" data-controller="HeaderOverlay">
+
+        <header class="Header Header--bottom Header--overlay">
+          <div class="Header-inner Header-inner--bottom" data-nc-group="bottom">
+            <div data-nc-container="bottom-left">
+              <nav class="Header-nav Header-nav--primary" data-nc-element="primary-nav" data-content-field="navigation">
+                
+  <div class="Header-nav-inner">
+    <a href="/" class="Header-nav-item Header-nav-item--active" data-test="template-nav">Home</a>
+  </div>
+
+              </nav>
+            </div>
+            <div data-nc-container="bottom-center">
+
+              <a href="/" class="Header-branding" data-nc-element="branding" data-content-field="site-title">
+                
+                  
+                    <img src="//static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c0dbd751ae6cf6c70974c4a/1544831215094/?format=1500w" alt="ReaperHCF" class="Header-branding-logo" />
+                  
+                
+              </a>
+              
+
+            </div>
+            <div data-nc-container="bottom-right">
+
+              <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation">
+                
+              </nav>
+
+            </div>
+          </div>
+        </header>
+
+        <div class="Content-outer">
+          
+
+          <main class="Index" data-collection-id="591a1b3ef7e0abb7026f16af" data-controller="IndexFirstSectionHeight, Parallax, IndexNavigation">
+            
+              <section id="reapermc" class="Index-page Index-page--has-image"  data-parallax-original-element data-collection-id="5c0d777c758d469c14856a4c" data-parallax-id="5c0d777c758d469c14856a4c" data-edit-main-image="Background">
+        
+          <div class="Index-page-scroll-indicator hidden" data-controller="ScrollIndicator">
+            <div class="Index-page-scroll-indicator-text">Scroll</div>
+            <svg class="Index-page-scroll-indicator-arrow Icon Icon--caretLarge--down" viewBox="0 0 48 23">
+              <use xlink:href="/assets/ui-icons.svg#caret-down-large-icon"></use>
+            </svg>
+            <div class="Index-page-scroll-indicator-line"></div>
+          </div>
+        
+        <div class="Index-page-content  sqs-alternate-block-style-container">
+          <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1544405031626" id="page-5c0d777c758d469c14856a4c"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-8098c5c91c3987ab2393"><div class="sqs-block-content"><h1 style="text-align: center; white-space: pre-wrap;">ReaperHCF</h1></div></div><div class="sqs-block button-block sqs-block-button" data-block-type="53" id="block-yui_3_17_2_22_1494883045723_3912"><div class="sqs-block-content">
+<div class="sqs-block-button-container--center" data-alignment="center" data-button-size="small">
+	<a href="http://reapernetmc.tebex.io/" class="sqs-block-button-element--small sqs-block-button-element" >Store</a>
+</div></div></div></div></div></div>
+        </div>
+        
+          
+            <figure class="Index-page-image" data-parallax-image-wrapper>
+              
+  <img data-src="https://static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c0d80b4352f5317ebe25b87/1544389034152/HelloTrans.png" data-image="https://static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c0d80b4352f5317ebe25b87/1544389034152/HelloTrans.png" data-image-dimensions="800x800" data-image-focal-point="0.5,0.5" alt="HelloTrans.png"  data-load="false" />
+
+            </figure>
+          
+        
+      </section>
+
+    
+
+  
+
+    
+
+      <section id="feed" class="Index-page"  data-collection-id="5c0eee7321c67cab2fbe4918" data-parallax-id="5c0eee7321c67cab2fbe4918" data-edit-main-image="Background">
+        
+        <div class="Index-page-content ">
+          <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1544733647334" id="page-5c0eee7321c67cab2fbe4918"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_1_1544744274336_3758"><div class="sqs-block-content"><p style="white-space: pre-wrap;"><strong>Official ReaperHCF Twitter Feed</strong></p></div></div><div class="sqs-block twitter-block sqs-block-twitter" data-block-json="&#123;&quot;title&quot;:true,&quot;thumbnail&quot;:true,&quot;excerpt&quot;:true,&quot;pageSize&quot;:10,&quot;collectionId&quot;:&quot;5c0ef65d96e76f0ffb6c0399&quot;,&quot;filter&quot;:&#123;&#125;,&quot;showAvatar&quot;:true,&quot;showUsername&quot;:true,&quot;followButton&quot;:false,&quot;hSize&quot;:null,&quot;floatDir&quot;:null,&quot;pageCollectionId&quot;:&quot;5c0eee7321c67cab2fbe4918&quot;,&quot;containingItemId&quot;:null&#125;" data-block-type="6" id="block-yui_3_17_2_1_1544495587207_3773"><div class="sqs-block-content">
+
+
+  <ul class="tweet-list" >
+    
+      <li class="tweet clear  " id="5c0ef65d6e958b000163a2fb">
+        
+          <div class="tweet-avatar-wrapper">
+            <a target="new" href="http://www.twitter.com/TheReaperHCF/">
+              <img class="tweet-avatar" src="https://pbs.twimg.com/profile_images/1039292657544167429/_Z8zuhlo_normal.jpg"/>
+            </a>
+          </div>
+        
+        <div class="tweet-text-wrapper">
+          
+            <div class="tweet-from"><a target="new" href="http://www.twitter.com/TheReaperHCF/">ReaperHCF Network</a></div>
+          
+          <div class="tweet-text">👀</div>
+          <time class="tweet-timestamp" datetime="2018-12-10"><a target="new" href="https://twitter.com/TheReaperHCF/status/1072247979225083905"><span class="timesince" data-date="1544478814000">about 4 days ago</span></a></time>
+        </div>
+      </li>
+    
+  </ul>
+
+
+</div></div></div></div></div>
+        </div>
+        
+          
+        
+      </section>
+
+    
+
+  
+
+    
+
+      <section id="new-page-1" class="Index-page"  data-collection-id="5c12c13a88251be7e5fcb57e" data-parallax-id="5c12c13a88251be7e5fcb57e" data-edit-main-image="Background">
+        
+        <div class="Index-page-content ">
+          <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1544831215093" id="page-5c12c13a88251be7e5fcb57e"><div class="row sqs-row"><div class="col sqs-col-1 span-1"><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-fe01fc20bf9f82a8a7f8"><div class="sqs-block-content">&nbsp;</div></div></div><div class="col sqs-col-10 span-10"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-2cd35d69e38451948041"><div class="sqs-block-content"><h2 style="text-align: center; white-space: pre-wrap;"><strong><em>Partners</em></strong></h2></div></div><div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" id="block-yui_3_17_2_1_1544743728054_20099"><div class="sqs-block-content"><hr /></div></div></div><div class="col sqs-col-1 span-1"><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-4acdf516dae701f93948"><div class="sqs-block-content">&nbsp;</div></div></div></div><div class="row sqs-row"><div class="col sqs-col-6 span-6"><div class="sqs-block image-block sqs-block-image" data-aspect-ratio="75" data-block-type="5" id="block-646f598615a9d3e2b96d"><div class="sqs-block-content">
+
+  
+
+  	
+      <div class="image-block-outer-wrapper layout-caption-below design-layout-inline combination-animation-none individual-animation-none individual-text-animation-none">
+      
+        <div class="intrinsic" style="max-width:331.0px;">
+          
+            <a href="http://store.reaperh.cf/category/1258428"  target="_blank">
+          
+            <div style="padding-bottom:75.0%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;VitalityMC&lt;/p&gt;" >
+              <noscript><img src="https://static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c12da434fa51afc80678b09/1544831057586/vitalitymc.png"  alt=" VitalityMC "  /></noscript><img class="thumb-image" alt=" VitalityMC " data-src="https://static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c12da434fa51afc80678b09/1544831057586/vitalitymc.png" data-image="https://static1.squarespace.com/static/5c0d77353c3a53edf57d1944/t/5c12da434fa51afc80678b09/1544831057586/vitalitymc.png" data-image-dimensions="331x331" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5c12da434fa51afc80678b09" data-type="image" />
+            </div>
+          
+            </a>
+          
+
+          
+          <div class="image-caption-wrapper">
+            <div class="image-caption"><p>VitalityMC</p></div>
+          </div>
+          
+
+        </div>
+      
+      </div>
+    
+
+  
+
+
+</div></div></div><div class="col sqs-col-6 span-6"><div class="sqs-block image-block sqs-block-image" data-aspect-ratio="75" data-block-type="5" id="block-9efc9f26698b453bb9d4"><div class="sqs-block-content"><div class="sqs-image sqs-empty"><div class="sqs-image-content" style="padding-bottom: 75.0%"></div></div></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-32cdd01ecf83021279d8"><div class="sqs-block-content"><p style="white-space: pre-wrap;">???????</p></div></div></div></div><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" id="block-yui_3_17_2_1_1544743728054_20821"><div class="sqs-block-content"><hr /></div></div></div></div></div>
+        </div>
+        
+          
+        
+      </section>
+
+    
+
+  
+
+    
+
+      <section id="new-page" class="Index-page"  data-collection-id="5c0ef84188251b1f81170c47" data-parallax-id="5c0ef84188251b1f81170c47" data-edit-main-image="Background">
+        
+        <div class="Index-page-content ">
+          <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1544732903460" id="page-5c0ef84188251b1f81170c47"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_1_1544743088945_5322"><div class="sqs-block-content"><h2 style="white-space: pre-wrap;">About ReaperHCF</h2></div></div><div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" id="block-yui_3_17_2_1_1544743088945_4641"><div class="sqs-block-content"><hr /></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-5c0ef84188251b1f81170c49"><div class="sqs-block-content"><p style="white-space: pre-wrap;">The Idea of ReaperHCF was to bring back the old feel of true Hardcore Factions after the announcement that prplz will close minehq and not work on kohi at all because he hates how toxic it is so on that day KevstahJr want to be the one to bring back hcf to it roots but since it has been &nbsp;3 years since kohi and badlion merged which was a sad news to the hcf community </p></div></div><div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" id="block-yui_3_17_2_1_1544743088945_4967"><div class="sqs-block-content"><hr /></div></div></div></div></div>
+        </div>
+        
+          
+        
+      </section>
+
+    
+
+  
+
+  
+    <nav class="Index-nav">
+      <div class="Index-nav-inner">
+        
+          <a href="#reapermc" class="Index-nav-item active">
+            <div class="Index-nav-indicator"></div>
+            <div class="Index-nav-text"><span>ReaperMC</span></div>
+          </a>
+        
+          <a href="#feed" class="Index-nav-item">
+            <div class="Index-nav-indicator"></div>
+            <div class="Index-nav-text"><span>Twitter Feed</span></div>
+          </a>
+        
+          <a href="#new-page-1" class="Index-nav-item">
+            <div class="Index-nav-indicator"></div>
+            <div class="Index-nav-text"><span>Partner</span></div>
+          </a>
+        
+          <a href="#new-page" class="Index-nav-item">
+            <div class="Index-nav-indicator"></div>
+            <div class="Index-nav-text"><span>About</span></div>
+          </a>
+        
+      </div>
+    </nav>
+            
+          </main>
+
+        </div>
+      </div>
+
+      <footer class="Footer" role="contentinfo" data-controller="FooterBreakpoints">
+
+  <div class="Footer-inner clear">
+
+    <div class="sqs-layout sqs-grid-12 columns-12 Footer-blocks Footer-blocks--top sqs-alternate-block-style-container" data-layout-label="Footer Top Blocks" data-type="block-field" data-updated-on="1454212685138" id="footerBlocksTop"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="row sqs-row"><div class="col sqs-col-0 span-0"></div><div class="col sqs-col-12 span-12"><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-yui_3_17_2_2_1454212162763_24564"><div class="sqs-block-content">&nbsp;</div></div></div></div></div></div></div>
+
+    <div class="Footer-middle">
+      <div class="Footer-business">
+
+        
+
+        
+          
+        
+
+      </div>
+
+      <div class="sqs-layout sqs-grid-12 columns-12 Footer-blocks Footer-blocks--middle sqs-alternate-block-style-container" data-layout-label="Footer Middle Blocks" data-type="block-field" data-updated-on="1544403176212" id="footerBlocksMiddle"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_1_1544390646360_1453"><div class="sqs-block-content"><h3 style="text-align: center; white-space: pre-wrap;">Reaperh.cf</h3></div></div></div></div></div>
+
+      
+    </div>
+
+    <div class="sqs-layout sqs-grid-12 columns-12 Footer-blocks Footer-blocks--bottom sqs-alternate-block-style-container" data-layout-label="Footer Bottom Blocks" data-type="block-field" data-updated-on="1544403876348" id="footerBlocksBottom"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_25_1494947875387_38191"><div class="sqs-block-content"><p style="margin-left: 40px; white-space: pre-wrap;">Copyright ©&nbsp;<strong>Reaper Network</strong>&nbsp;2018.</p></div></div></div></div></div>
+
+  </div>
+
 </footer>
-</div> 
-<div class="u-bottomFixer js-bottomFixTarget">
-<ul class="notices notices--bottom_fixer  js-notices" data-xf-init="notices" data-type="bottom_fixer" data-scroll-interval="6">
-<li class="notice js-notice notice--primary notice--cookie" data-notice-id="-1" data-delay-duration="0" data-display-duration="0" data-auto-dismiss="0" data-visibility="">
-<div class="notice-content">
-<div class="u-alignCenter">
-This site uses cookies to help personalise content, tailor your experience and to keep you logged in if you register.<br />
-By continuing to use this site, you are consenting to our use of cookies.
-</div>
-<div class="u-inputSpacer u-alignCenter">
-<a href="/account/dismiss-notice" class="js-noticeDismiss button--notice button button--icon button--icon--confirm" data-xf-init="tooltip" title="Dismiss notice"><span class="button-text">Accept</span></a>
-<a href="/help/cookies" class="button--notice button"><span class="button-text">Learn more…</span></a>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="u-scrollButtons js-scrollButtons" data-trigger-type="up">
-<a href="#top" class="button--scroll button" data-xf-click="scroll-to"><span class="button-text"><i class="fa fa-angle-double-up"></i><span class="u-srOnly">Top</span></span></a>
-</div>
-<script src="/js/vendor/jquery/jquery-3.2.1.min.js?_v=4bdbb8c2" type="90f76c5b6578e03f6488201b-text/javascript"></script>
-<script src="/js/vendor/vendor-compiled.js?_v=4bdbb8c2" type="90f76c5b6578e03f6488201b-text/javascript"></script>
-<script src="/js/xf/core-compiled.js?_v=4bdbb8c2" type="90f76c5b6578e03f6488201b-text/javascript"></script>
-<script src="/js/xf/notice.min.js?_v=4bdbb8c2" type="90f76c5b6578e03f6488201b-text/javascript"></script>
-<script type="90f76c5b6578e03f6488201b-text/javascript">
 
-						jQuery.extend(XF.phrases, {
-							link_copied_to_clipboard: "Link copied to clipboard."
-						});
-					
-</script>
-<script type="90f76c5b6578e03f6488201b-text/javascript">
-		jQuery.extend(true, XF.config, {
-			// 
-			userId: 0,
-			url: {
-				fullBase: 'https://skycade.net/',
-				basePath: '/',
-				css: '/css.php?css=__SENTINEL__&s=3&l=1&d=1543961368',
-				keepAlive: '/login/keep-alive'
-			},
-			cookie: {
-				path: '/',
-				domain: '',
-				prefix: 'xf_',
-				secure: true
-			},
-			csrf: '1544830003,1f2938343cc74863f97d9a32105d9f5d',
-			js: {"\/js\/xf\/notice.min.js?_v=4bdbb8c2":true},
-			css: {"public:node_list.less":true,"public:notices.less":true,"public:reme_core.less":true,"public:share_controls.less":true,"public:extra.less":true},
-			time: {
-				now: 1544830003,
-				today: 1544745600,
-				todayDow: 5
-			},
-			borderSizeFeature: '3px',
-			enableRtnProtect: true,
-			enableFormSubmitSticky: true,
-			uploadMaxFilesize: 157286400,
-			visitorCounts: {
-				conversations_unread: '0',
-				alerts_unread: '0',
-				total_unread: '0',
-				title_count: true,
-				icon_indicator: true
-			},
-			jsState: {}
-		});
 
-		jQuery.extend(XF.phrases, {
-			// 
-			date_x_at_time_y: "{date} at {time}",
-			day_x_at_time_y:  "{day} at {time}",
-			yesterday_at_x:   "Yesterday at {time}",
-			x_minutes_ago:    "{minutes} minutes ago",
-			one_minute_ago:   "1 minute ago",
-			a_moment_ago:     "A moment ago",
-			today_at_x:       "Today at {time}",
-			in_a_moment:      "In a moment",
-			in_a_minute:      "In a minute",
-			in_x_minutes:     "In {minutes} minutes",
-			later_today_at_x: "Later today at {time}",
-			tomorrow_at_x:    "Tomorrow at {time}",
+    </div>
 
-			day0: "Sunday",
-			day1: "Monday",
-			day2: "Tuesday",
-			day3: "Wednesday",
-			day4: "Thursday",
-			day5: "Friday",
-			day6: "Saturday",
+    <script src="https://static1.squarespace.com/static/ta/55f0a9b0e4b0f3eb70352f6d/320/scripts/site-bundle.js" type="text/javascript"></script>
 
-			dayShort0: "Sun",
-			dayShort1: "Mon",
-			dayShort2: "Tue",
-			dayShort3: "Wed",
-			dayShort4: "Thu",
-			dayShort5: "Fri",
-			dayShort6: "Sat",
+    <script type="text/javascript" data-sqs-type="imageloader-bootstrapper">(function() {if(window.ImageLoader) { window.ImageLoader.bootstrap({}, document); }})();</script><script>Squarespace.afterBodyLoad(Y);</script><svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none"><symbol id="twitter-icon" viewBox="0 0 64 64"><path d="M48,22.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6 C41.7,19.8,40,19,38.2,19c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,2.9,10.1,2.9c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C46,24.5,47.1,23.4,48,22.1z"/></symbol><symbol id="twitter-mask" viewBox="0 0 64 64"><path d="M0,0v64h64V0H0z M44.7,25.5c0,0.3,0,0.6,0,0.8C44.7,35,38.1,45,26.1,45c-3.7,0-7.2-1.1-10.1-2.9 c0.5,0.1,1,0.1,1.6,0.1c3.1,0,5.9-1,8.2-2.8c-2.9-0.1-5.3-2-6.1-4.6c0.4,0.1,0.8,0.1,1.2,0.1c0.6,0,1.2-0.1,1.7-0.2 c-3-0.6-5.3-3.3-5.3-6.4c0,0,0-0.1,0-0.1c0.9,0.5,1.9,0.8,3,0.8c-1.8-1.2-2.9-3.2-2.9-5.5c0-1.2,0.3-2.3,0.9-3.3 c3.2,4,8.1,6.6,13.5,6.9c-0.1-0.5-0.2-1-0.2-1.5c0-3.6,2.9-6.6,6.6-6.6c1.9,0,3.6,0.8,4.8,2.1c1.5-0.3,2.9-0.8,4.2-1.6 c-0.5,1.5-1.5,2.8-2.9,3.6c1.3-0.2,2.6-0.5,3.8-1C47.1,23.4,46,24.5,44.7,25.5z"/></symbol></svg>
 
-			month0: "January",
-			month1: "February",
-			month2: "March",
-			month3: "April",
-			month4: "May",
-			month5: "June",
-			month6: "July",
-			month7: "August",
-			month8: "September",
-			month9: "October",
-			month10: "November",
-			month11: "December",
-
-			active_user_changed_reload_page: "The active user has changed. Reload the page for the latest version.",
-			server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
-			oops_we_ran_into_some_problems: "Oops! We ran into some problems.",
-			oops_we_ran_into_some_problems_more_details_console: "Oops! We ran into some problems. Please try again later. More error details may be in the browser console.",
-			file_too_large_to_upload: "The file is too large to be uploaded.",
-			uploaded_file_is_too_large_for_server_to_process: "The uploaded file is too large for the server to process.",
-			files_being_uploaded_are_you_sure: "Files are still being uploaded. Are you sure you want to submit this form?",
-			attach: "Attach files",
-			rich_text_box: "Rich text box",
-			close: "Close",
-
-			showing_x_of_y_items: "Showing {count} of {total} items",
-			showing_all_items: "Showing all items",
-			no_items_to_display: "No items to display"
-		});
-	</script>
-<form style="display:none" hidden="hidden">
-<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
-</form>
-<script type="application/ld+json">
-		{
-			"@context": "https://schema.org",
-			"@type": "WebSite",
-			"url": "https://skycade.net/",
-			"potentialAction": {
-				"@type": "SearchAction",
-				"target": "https://skycade.net/search/search?keywords={search_keywords}",
-				"query-input": "required name=search_keywords"
-			}
-		}
-		</script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/2448a7bd/cloudflare-static/rocket-loader.min.js" data-cf-nonce="90f76c5b6578e03f6488201b-" defer=""></script></body>
+  </body>
 </html>
