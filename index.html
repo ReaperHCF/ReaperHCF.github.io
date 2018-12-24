@@ -1,99 +1,789 @@
-<!-- Proudly created by BlexieKing -->
-<!-- https://www.spigotmc.org/members/blexieking.168027 -->
 
 <!DOCTYPE html>
-<html>
+<html id="XF" lang="en-US" dir="LTR" data-app="public" data-template="EWRporta_articles_index" data-container-key="" data-content-key="" data-logged-in="false" data-cookie-prefix="xf_" class="has-no-js template-EWRporta_articles_index">
 <head>
-	<title>MyServer - Official Website</title>
-	<meta name="description" content="MyServer is a revolutionary Minecraft server. You can join with the IP 'play.myserver.net'.">
-	<meta name="keywords" content="MyServer, MyServer.com, Minecraft Server, Minecraft, Fun, Play, Info, Website, Official">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/stylesheet.css">
-	<link rel="stylesheet" href="css/home.css">
-	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900' type='text/css'>
-	<script src="https://cdn.rawgit.com/leonardosnt/mc-player-counter/1.1.0/dist/mc-player-counter.min.js"></script>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ViperMC</title>
+<meta name="description" content="Visit the forums of ViperMC." />
+<meta property="og:description" content="Visit the forums of ViperMC." />
+<meta property="twitter:description" content="Visit the forums of ViperMC." />
+<link rel="next" href="/ewr-porta/page-2" />
+<meta property="og:site_name" content="ViperMC" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ViperMC" />
+<meta property="twitter:title" content="ViperMC" />
+<meta property="og:url" content="https://www.vipermc.net/" />
+<meta name="theme-color" content="#79B8E6" />
+<link rel="preload" href="/styles/fonts/fa/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin="anonymous" />
+<link rel="stylesheet" href="/css.php?css=public%3Anormalize.css%2Cpublic%3Acore.less%2Cpublic%3Aapp.less%2Cpublic%3Afont_awesome.css&amp;s=10&amp;l=1&amp;d=1544829034&amp;k=a79c1fdb50a8957f971df9967c6a1353db4bbef2" />
+<link rel="stylesheet" href="/css.php?css=public%3AEWRporta.less%2Cpublic%3AEWRporta_articles.less%2Cpublic%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Amessage.less%2Cpublic%3Aextra.less&amp;s=10&amp;l=1&amp;d=1544829034&amp;k=360dba55fcb52299bb83dc9c8500dee8b1950662" />
+<script src="/js/xf/preamble-compiled.js?_v=bde24e90"></script>
+<link rel="icon" type="image/png" href="https://i.imgur.com/z7JLpqz.png" sizes="32x32" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.css">
+<link rel="stylesheet" href="/styles/ndzn/vipermc/style.css" />
 </head>
-<body>
-	<div class="container">
-		<header>
-			<div class="header">
-				<div class="logo">
-					<!-- In the img folder, upload your logo. -->
-					<!-- Make sure to name it 'logo.png'! -->
-					<a href="/"><img src="img/logo.png" alt="MyServer logo"></a>
-				</div>
+<body data-template="EWRporta_articles_index">
+<div id="ndzn-curtain" onclick></div>
+<div class="p-pageWrapper" id="top">
+<header>
+<div class="header-nav">
+<div class="p-body-inner">
+<div class="block ip">
+<h4>play.vipermc.net</h4>
+<p id="ndzn_playercount">loading . . .</p>
+</div>
+<div class="block nav">
+<div class="_mobileOnly nav-header">
+<h4 class="nav-title">ViperMC</h4>
+<span onclick class="nav-close fa fa-times"></span>
+</div>
+<a href="/">Home</a>
+<a href="/forums/">Forum</a>
+<a href="https://store.vipermc.net">Store</a>
+<a href="/partners">Partners</a>
+<a href="/members/?key=staff_members/">Staff</a>
+<a href="https://www.vipermc.net/login">Login</a>
+</div>
+<div class="block navToggle">
+<i class="fa fa-bars"></i>
+</div>
+</div>
+</div>
+<div class="header-logoBlock">
+<div class="p-body-inner ndzn-flex">
+<div class="block discord" onclick="window.open('https://www.vipermc.net/discord','_blank')">
+<i class="icon"></i>
+<div class="text">
+<h4>Join our Discord Server</h4>
+<p>
+News, giveaways &amp; community<br />
+talk. <b id="ndzn-discord-count">0 members online.</b>
+</p>
+</div>
+</div>
+<a id="logo" href="/"></a>
+<div class="block stats">
+<div class="stat">
+Server Status <b class="icon-after icon-players ndzn_playercount">Online</b>
+</div>
+<div class="stat">
+Active Sale <b class="icon-after icon-kills">45%</b>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+<div class="offCanvasMenu-content">
+<div class="offCanvasMenu-header">
+Menu
+<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Close"></a>
+</div>
+<div class="p-offCanvasRegisterLink">
+<div class="offCanvasMenu-linkHolder">
+<a href="/login/" class="offCanvasMenu-link" rel="nofollow" data-xf-click="overlay" data-menu-close="true">
+Log in
+</a>
+</div>
+<hr class="offCanvasMenu-separator" />
+<div class="offCanvasMenu-linkHolder">
+<a href="/register/" class="offCanvasMenu-link" rel="nofollow" data-xf-click="overlay" data-menu-close="true">
+Register
+</a>
+</div>
+<hr class="offCanvasMenu-separator" />
+</div>
+<div class="js-offCanvasNavTarget"></div>
+</div>
+</div>
+<div class="ndzn-breadcrumbs">
+<div class="p-body-inner">
+</div>
+</div>
+<div class="ndzn-titleBar">
+<div class="p-body-inner">
+<div class="p-body-header">
+<div class="p-title ">
+<h1 class="p-title-value">ViperMC</h1>
+</div>
+</div>
+</div>
+</div>
+<div class="p-body">
+<div class="p-body-inner">
 
-				<ul class="nav">
-					<li><a href="./">Home</a></li>
-					<li><a href="#">Forums</a></li>
-					<li><a href="#">Store</a></li>
-					<li><a href="./staff.html">Staff</a></li>
-				</ul>
-			</div>
-			<h1 class="animate">Welcome to the official MyServer website!</h1>
-			<div class="playercount">
-				<!-- Replace play.flaremc.net with your IP address! -->
-				<!-- Make sure to do it for both examples below. -->
-				<p>Join <span data-playercounter-ip="play.myserver.net">
-				0</span> other players on <span>play.myserver.net</span></p>
-			</div>
-		</header>
+<noscript><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding.</div></noscript>
+<!--[if lt IE 9]><div class="blockMessage blockMessage&#45;&#45;important blockMessage&#45;&#45;iconic">You are using an out of date browser. It  may not display this or other websites correctly.<br />You should upgrade or use an <a href="https://www.google.com/chrome/browser/" target="_blank">alternative browser</a>.</div><![endif]-->
+<div class="p-body-main p-body-main--withSidebar ">
+<div class="p-body-content">
+<div class="p-body-pageContent">
+<div class="porta-articles-above-full">
+</div>
+<div class="porta-articles-above-split porta-widgets-split">
+</div>
+<div class="block porta-infinite " data-xf-init="porta-infinite " data-masonry="" data-click="1" data-after="0" data-history="0">
+<div class="porta-article-item">
+<div class="block-container porta-article-container">
+<h2 class="block-header">
+<a href="/threads/royale-map-four.3216/">
+Royale | Map Four
+</a>
+</h2>
+<div class="block-body message-inner">
+<div class="message-cell porta-article-date">
+<div class="porta-date-block">
+Dec
+<b>21</b>
+</div>
+</div>
+<div class="message-cell message-main">
+<header class="message-attribution">
+<div class="message-attribution-main">
+<ul class="listInline listInline--bullet">
+<li>
+<i class="fa fa-user"></i>
+<a href="/ewr-porta/authors/config.38/" class="u-concealed">
+Config</a>
+</li>
+<li>
+<i class="fa fa-clock-o"></i>
+<a href="/threads/royale-map-four.3216/" class="u-concealed">
+<time class="u-dt" dir="auto" datetime="2018-12-21T18:53:00-0500" data-time="1545436380" data-date-string="Dec 21, 2018" data-time-string="6:53 PM" title="Dec 21, 2018 at 6:53 PM" data-full-old-date="true">Friday at 6:53 PM</time></a>
+</li>
+</ul>
+</div>
+<div class="message-attribution-opposite">
+<ul class="listInline listInline--bullet">
+<li>
+<i class="fa fa-eye"></i>
+704
+</li>
+<li>
+<i class="fa fa-comments"></i>
+13
+</li>
+</ul>
+</div>
+</header>
+<div class="message-body">
+<div class="bbWrapper"><div style="text-align: center"><div class="lbContainer lbContainer--inline" data-xf-init="lightbox" data-lb-single-image="1" data-lb-container-zoom="1" data-lb-trigger=".js-lbImage-_xfUid-1-1545660946" data-lb-id="_xfUid-1-1545660946">
+<div class="lbContainer-zoomer js-lbImage-_xfUid-1-1545660946" data-src="https://www.vipermc.net/proxy.php?image=https%3A%2F%2Fi.imgur.com%2FfUGuEz3.png&amp;hash=871e5ea1e9be017d948e1091560ef10d" aria-label="Zoom"></div>
+<img src="https://www.vipermc.net/proxy.php?image=https%3A%2F%2Fi.imgur.com%2FfUGuEz3.png&amp;hash=871e5ea1e9be017d948e1091560ef10d" data-url="https://www.vipermc.net/proxy.php?image=https%3A%2F%2Fi.imgur.com%2FfUGuEz3.png&amp;hash=871e5ea1e9be017d948e1091560ef10d" class="bbImage" data-zoom-target="1" alt="" />
+</div></div><br />
+<b>Hey everyone.</b><br />
+<br />
+This post will have the details regarding the fourth map of our Royale server. Just as a reminder, Royale is a more competitive experience whereas Reforged provides slightly less hardcore/competitive gameplay.<br />
+<br />
+We're also going to be re-enabling Treasure Island, Controllable Land, and some other features. Please ensure that these features are used, as if they aren't, we'll simply remove them again.<br />
+<br />
+<b><span style="color: rgb(235, 107, 86)">Also, all bans (excl. chargeback, DDoS, and blacklists) have been wiped!</span></b><br />
+<br />
+<div style="text-align: center"><i>The server is releasing on...</i><br />
+<b><span style="color: rgb(251, 160, 38)"><span style="font-size: 22px">Saturday, 22nd of December at 2:00 PM EST</span></span></b>&#8203;</div><br />
+<b><span style="font-size: 18px">Map Kit and Faction Sizes</span></b><br />
+Royale will have the following map kit. There is no anti-rotation/cycle system this map...</div>
+</div>
+</div>
+</div>
+<div class="block-footer">
+<div class="block-footer-counter">
+</div>
+<div class="block-footer-controls">
+<a href="/threads/royale-map-four.3216/" class="button"><span class="button-text">
+<div class="fa fa-sign-in"></div>&nbsp;
+Continue…
+</span></a>
+</div>
+</div>
+</div>
+</div><div class="porta-article-item">
+<div class="block-container porta-article-container">
+<h2 class="block-header">
+<a href="/threads/reforged-map-two-practice-season-one.3020/">
+<span class="label label--skyBlue" dir="auto">Important</span>
+Reforged Map Two &amp; Practice Season One
+</a>
+</h2>
+<div class="block-body message-inner">
+<div class="message-cell porta-article-date">
+<div class="porta-date-block">
+Dec
+<b>13</b>
+</div>
+</div>
+<div class="message-cell message-main">
+<header class="message-attribution">
+<div class="message-attribution-main">
+<ul class="listInline listInline--bullet">
+<li>
+<i class="fa fa-user"></i>
+<a href="/ewr-porta/authors/resilience.4/" class="u-concealed">
+Resilience</a>
+</li>
+<li>
+<i class="fa fa-clock-o"></i>
+<a href="/threads/reforged-map-two-practice-season-one.3020/" class="u-concealed">
+<time class="u-dt" dir="auto" datetime="2018-12-13T22:33:00-0500" data-time="1544758380" data-date-string="Dec 13, 2018" data-time-string="10:33 PM" title="Dec 13, 2018 at 10:33 PM" data-full-old-date="true">Dec 13, 2018</time></a>
+</li>
+</ul>
+</div>
+<div class="message-attribution-opposite">
+<ul class="listInline listInline--bullet">
+<li>
+<i class="fa fa-eye"></i>
+1,112
+</li>
+<li>
+<i class="fa fa-comments"></i>
+16
+</li>
+</ul>
+</div>
+</header>
+<div class="message-body">
+<div class="porta-block-icon">
+<a href="/members/resilience.4/" class="avatar avatar--s" data-user-id="4" data-xf-init="member-tooltip">
+<img src="/data/avatars/s/0/4.jpg?1534569607" srcset="/data/avatars/m/0/4.jpg?1534569607 2x" alt="Resilience" class="avatar-u4-s" itemprop="image" />
+</a>
+</div>
+<div class="bbWrapper"><div style="text-align: center"><div class="lbContainer lbContainer--inline" data-xf-init="lightbox" data-lb-single-image="1" data-lb-container-zoom="1" data-lb-trigger=".js-lbImage-_xfUid-2-1545660946" data-lb-id="_xfUid-2-1545660946">
+<div class="lbContainer-zoomer js-lbImage-_xfUid-2-1545660946" data-src="/proxy.php?image=https%3A%2F%2Fi.imgur.com%2FBnxhmx5.png&amp;hash=ed5f6822f09e084d99a1e63a61df779b" aria-label="Zoom"></div>
+<img src="/proxy.php?image=https%3A%2F%2Fi.imgur.com%2FBnxhmx5.png&amp;hash=ed5f6822f09e084d99a1e63a61df779b" data-url="https://i.imgur.com/Bnxhmx5.png" class="bbImage" data-zoom-target="1" alt="" />
+</div>
+<br />&#8203;</div><b>Hey everyone.</b><br />
+<br />
+I'm writing this post to announce the next map of Reforged and the release of our newest core gamemode, Practice. Reforged is the faster paced, smaller faction size server on Viper.<br />
+<br />
+Alongside this week's HCF release, we're releasing Practice. For more information on that, scroll down to the bottom of this post.<br />
+<br />
+<div style="text-align: center"><i>Practice releases on...</i><br />
+<b><span style="color: rgb(44, 130, 201)"><span style="font-size: 22px">Saturday, 15th of December at 12:00 PM EST</span></span></b><br />
+<br />
+<i>Reforged releases on...</i><br />
+<b><span style="color: rgb(44, 130, 201)"><span style="font-size: 22px">Saturday, 15th of December at 2:00 PM EST</span></span></b><br />&#8203;</div><br />
+<b><span style="font-size: 18px">Map Kit and Faction Sizes</span></b><br />
+Reforged will have the following map kit. Each map, we'll be playing around with the sizes and enchantments to keep things fresh. We frequently post polls for the map kit in Discord, make sure you join that by clicking <a href="http://vipermc.net/discord" target="_blank" class="link link--external" data-proxy-href="/proxy.php?link=http%3A%2F%2Fvipermc.net%2Fdiscord&amp;hash=eef8ba2d8160c45b2a5850dadb7828fd" rel="noopener">here</a>...</div>
+</div>
+</div>
+</div>
+<div class="block-footer">
+<div class="block-footer-counter">
+</div>
+<div class="block-footer-controls">
+<a href="/threads/reforged-map-two-practice-season-one.3020/" class="button"><span class="button-text">
+<div class="fa fa-sign-in"></div>&nbsp;
+Continue…
+</span></a>
+</div>
+</div>
+</div>
+</div><div class="porta-article-item">
+<div class="block-container porta-article-container">
+<h2 class="block-header">
+<a href="/threads/royale-map-three.2851/">
+<span class="label label--skyBlue" dir="auto">Important</span>
+Royale | Map Three
+</a>
+</h2>
+<div class="block-body message-inner">
+<div class="message-cell porta-article-date">
+<div class="porta-date-block">
+Dec
+<b>06</b>
+</div>
+</div>
+<div class="message-cell message-main">
+<header class="message-attribution">
+<div class="message-attribution-main">
+<ul class="listInline listInline--bullet">
+<li>
+<i class="fa fa-user"></i>
+<a href="/ewr-porta/authors/config.38/" class="u-concealed">
+Config</a>
+</li>
+<li>
+<i class="fa fa-clock-o"></i>
+<a href="/threads/royale-map-three.2851/" class="u-concealed">
+<time class="u-dt" dir="auto" datetime="2018-12-06T00:39:00-0500" data-time="1544074740" data-date-string="Dec 6, 2018" data-time-string="12:39 AM" title="Dec 6, 2018 at 12:39 AM" data-full-old-date="true">Dec 6, 2018</time></a>
+</li>
+</ul>
+</div>
+<div class="message-attribution-opposite">
+<ul class="listInline listInline--bullet">
+<li>
+<i class="fa fa-eye"></i>
+1,225
+</li>
+<li>
+<i class="fa fa-comments"></i>
+11
+</li>
+</ul>
+</div>
+</header>
+<div class="message-body">
+<div class="bbWrapper"><div style="text-align: center"><div class="lbContainer lbContainer--inline" data-xf-init="lightbox" data-lb-single-image="1" data-lb-container-zoom="1" data-lb-trigger=".js-lbImage-_xfUid-3-1545660946" data-lb-id="_xfUid-3-1545660946">
+<div class="lbContainer-zoomer js-lbImage-_xfUid-3-1545660946" data-src="/proxy.php?image=https%3A%2F%2Fi.imgur.com%2FfUGuEz3.png&amp;hash=871e5ea1e9be017d948e1091560ef10d" aria-label="Zoom"></div>
+<img src="/proxy.php?image=https%3A%2F%2Fi.imgur.com%2FfUGuEz3.png&amp;hash=871e5ea1e9be017d948e1091560ef10d" data-url="https://i.imgur.com/fUGuEz3.png" class="bbImage" data-zoom-target="1" alt="" />
+</div>
+<br />&#8203;</div><b>Hey everyone.</b><br />
+<br />
+I'm writing this post to announce the next map of Royale. Royale will be slightly more competitive than Reforged and is aimed at larger factions. Here's what I mentioned on the last post I made about Reforged's reset.<br />
+<div class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote">
+<div class="bbCodeBlock-title">
+<a href="/goto/post?id=26512" class="bbCodeBlock-sourceJump" data-xf-click="attribution" data-content-selector="#post-26512">Config said:</a>
+</div>
+<div class="bbCodeBlock-content">
+<div class="bbCodeBlock-expandContent">
+There will be many key differences between Reforged and the original server, which is now called Royale. Royale will focus on providing a slightly more competitive experience, with larger faction sizes and higher map kits. Reforged will offer smaller faction sizes, lower kits, and a few different features. The general features, some builds, and other aspects will be consistent with both servers. Ranks are global, and will apply across our entire network.
+</div>
+<div class="bbCodeBlock-expandLink"><a>Click to expand...</a></div>
+</div>
+</div>We've worked behind the scenes this map on performance enhancements and upgrades. We're also doing a variety of store changes, including the introduction of three new ranks and a...</div>
+</div>
+</div>
+</div>
+<div class="block-footer">
+<div class="block-footer-counter">
+</div>
+<div class="block-footer-controls">
+<a href="/threads/royale-map-three.2851/" class="button"><span class="button-text">
+<div class="fa fa-sign-in"></div>&nbsp;
+Continue…
+</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="block porta-article-status">
+<div class="porta-article-ellipse infinite-scroll-request">
+<span class="loader-ellipse-dot"></span>
+<span class="loader-ellipse-dot"></span>
+<span class="loader-ellipse-dot"></span>
+<span class="loader-ellipse-dot"></span>
+</div>
+</div>
+<div class="block porta-article-loader">
+<button type="button" class="porta-article-button button--cta button"><span class="button-text">Load more…</span></button>
+</div>
+<div class="block porta-article-pager">
+<div class="block-outer block-outer--after">
+<div class="block-outer-main"><nav class="pageNavWrapper pageNavWrapper--mixed ">
+<div class="pageNav  ">
+<ul class="pageNav-main">
+<li class="pageNav-page pageNav-page--current "><a href="/">1</a></li>
+<li class="pageNav-page pageNav-page--later"><a href="/ewr-porta/page-2">2</a></li>
+<li class="pageNav-page pageNav-page--later"><a href="/ewr-porta/page-3">3</a></li>
+<li class="pageNav-page "><a href="/ewr-porta/page-4">4</a></li>
+</ul>
+<a href="/ewr-porta/page-2" class="pageNav-jump pageNav-jump--next">Next</a>
+</div>
+<div class="pageNavSimple">
+<a class="pageNavSimple-el pageNavSimple-el--current" data-xf-init="tooltip" title="Go to page" data-xf-click="menu" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true">
+1 of 4
+</a>
+<div class="menu menu--pageJump" data-menu="menu" aria-hidden="true">
+<div class="menu-content">
+<h4 class="menu-header">Go to page</h4>
+<div class="menu-row" data-xf-init="page-jump" data-page-url="/ewr-porta/page-%page%">
+<div class="inputGroup inputGroup--numbers">
+<div class="inputGroup inputGroup--numbers inputNumber" data-xf-init="number-box"><input type="number" pattern="\d*" class="input input--number js-numberBoxTextInput input input--numberNarrow js-pageJumpPage" value="1" min="1" max="4" step="1" required="required" data-menu-autofocus="true" /></div>
+ <span class="inputGroup-text"><button type="button" class="js-pageJumpGo button"><span class="button-text">Go</span></button></span>
+</div>
+</div>
+</div>
+</div>
+<a href="/ewr-porta/page-2" class="pageNavSimple-el pageNavSimple-el--next">
+Next <i aria-hidden="true"></i>
+</a>
+<a href="/ewr-porta/page-4" class="pageNavSimple-el pageNavSimple-el--last" data-xf-init="tooltip" title="Last">
+<i aria-hidden="true"></i> <span class="u-srOnly">Last</span>
+</a>
+</div>
+</nav>
+</div>
+</div>
+</div>
+<div class="porta-articles-below-full">
+</div>
+<div class="porta-articles-below-split porta-widgets-split">
+</div>
+</div>
+</div>
+<div class="p-body-sidebar">
+<div class="block" data-widget-section="staffMembers" data-widget-id="16" data-widget-key="membersOn" data-widget-definition="members_online">
+<div class="block-container">
+<h3 class="block-minorHeader"><a href="/members/?key=staff_members">Staff online</a></h3>
+<ul class="block-body">
+<li class="block-row">
+<div class="contentRow">
+<div class="contentRow-figure">
+<a href="/members/posting.371/" class="avatar avatar--xs" data-user-id="371" data-xf-init="member-tooltip">
+<img src="/data/avatars/s/0/371.jpg?1542938435" srcset="/data/avatars/m/0/371.jpg?1542938435 2x" alt="Posting" class="avatar-u371-s" />
+</a>
+</div>
+<div class="contentRow-main contentRow-main--close">
+<a href="/members/posting.371/" class="username " dir="auto" data-user-id="371" data-xf-init="member-tooltip"><span class="username--style10 username--staff">Posting</span></a>
+<div class="contentRow-minor">
+<span class="userTitle" dir="auto">Senior Admin</span>
+</div>
+</div>
+</div>
+</li>
+<li class="block-row">
+<div class="contentRow">
+<div class="contentRow-figure">
+<a href="/members/chique.2151/" class="avatar avatar--xs" data-user-id="2151" data-xf-init="member-tooltip">
+<img src="/data/avatars/s/2/2151.jpg?1540411080" srcset="/data/avatars/m/2/2151.jpg?1540411080 2x" alt="Chique" class="avatar-u2151-s" />
+</a>
+</div>
+<div class="contentRow-main contentRow-main--close">
+<a href="/members/chique.2151/" class="username " dir="auto" data-user-id="2151" data-xf-init="member-tooltip"><span class="username--style7 username--staff">Chique</span></a>
+<div class="contentRow-minor">
+<span class="userTitle" dir="auto">Server Mod</span>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="block" data-widget-section="onlineNow" data-widget-id="16" data-widget-key="membersOn" data-widget-definition="members_online">
+<div class="block-container">
+<h3 class="block-minorHeader"><a href="/online/">Members online</a></h3>
+<div class="block-body">
+<div class="block-row block-row--minor">
+<ul class="listInline listInline--comma">
+<li><a href="/members/eradicating.1222/" class="username " dir="auto" data-user-id="1222" data-xf-init="member-tooltip">Eradicating</a></li><li><a href="/members/aywy.1559/" class="username " dir="auto" data-user-id="1559" data-xf-init="member-tooltip">Aywy</a></li><li><a href="/members/damp.282/" class="username " dir="auto" data-user-id="282" data-xf-init="member-tooltip">Damp</a></li><li><a href="/members/issyy_.2202/" class="username " dir="auto" data-user-id="2202" data-xf-init="member-tooltip">Issyy_</a></li><li><a href="/members/blatantingg.3348/" class="username " dir="auto" data-user-id="3348" data-xf-init="member-tooltip">blatantingg</a></li><li><a href="/members/ilyvert.3379/" class="username " dir="auto" data-user-id="3379" data-xf-init="member-tooltip">Ilyvert</a></li><li><a href="/members/philip505.245/" class="username " dir="auto" data-user-id="245" data-xf-init="member-tooltip">philip505</a></li><li><a href="/members/myside.2482/" class="username " dir="auto" data-user-id="2482" data-xf-init="member-tooltip">MySide</a></li><li><a href="/members/blushingog.2600/" class="username " dir="auto" data-user-id="2600" data-xf-init="member-tooltip">BlushingOG</a></li><li><a href="/members/posting.371/" class="username " dir="auto" data-user-id="371" data-xf-init="member-tooltip"><span class="username--style10 username--staff">Posting</span></a></li><li><a href="/members/yolity.967/" class="username " dir="auto" data-user-id="967" data-xf-init="member-tooltip">Yolity</a></li><li><a href="/members/leaft.1197/" class="username " dir="auto" data-user-id="1197" data-xf-init="member-tooltip">Leaft</a></li><li><a href="/members/_luiigi_.2122/" class="username " dir="auto" data-user-id="2122" data-xf-init="member-tooltip">_Luiigi_</a></li><li><a href="/members/wunji.1932/" class="username " dir="auto" data-user-id="1932" data-xf-init="member-tooltip">Wunji</a></li><li><a href="/members/zij.723/" class="username " dir="auto" data-user-id="723" data-xf-init="member-tooltip">Zij</a></li><li><a href="/members/maeglyn.3000/" class="username " dir="auto" data-user-id="3000" data-xf-init="member-tooltip">Maeglyn</a></li><li><a href="/members/supple.1227/" class="username " dir="auto" data-user-id="1227" data-xf-init="member-tooltip">supple</a></li><li><a href="/members/spleefed.314/" class="username " dir="auto" data-user-id="314" data-xf-init="member-tooltip">Spleefed</a></li><li><a href="/members/chique.2151/" class="username " dir="auto" data-user-id="2151" data-xf-init="member-tooltip"><span class="username--style7 username--staff">Chique</span></a></li>
+</ul>
+</div>
+</div>
+<div class="block-footer">
+<span class="block-footer-counter">Total:&nbsp;82 (members:&nbsp;19, guests:&nbsp;63)</span>
+</div>
+</div>
+</div>
+<div class="block" data-widget-id="13" data-widget-key="newposts" data-widget-definition="new_posts">
+<div class="block-container">
+<h3 class="block-minorHeader">
+<a href="/whats-new/posts/?skip=1" rel="nofollow">Latest posts</a>
+</h3>
+<ul class="block-body">
+<li class="block-row">
+<div class="contentRow">
+<div class="contentRow-figure">
+<a href="/members/eradicating.1222/" class="avatar avatar--xxs avatar--default avatar--default--dynamic" data-user-id="1222" data-xf-init="member-tooltip" style="background-color: #99cc66; color: #406020">
+<span class="avatar-u1222-s">E</span>
+</a>
+</div>
+<div class="contentRow-main contentRow-main--close">
+<a href="/threads/lff-leaft-cheategin5.3272/post-29838">LFF Leaft/cheategin5</a>
+<div class="contentRow-minor contentRow-minor--hideLinks">
+<ul class="listInline listInline--bullet">
+<li>Latest: Eradicating</li>
+<li><time class="u-dt" dir="auto" datetime="2018-12-24T09:11:54-0500" data-time="1545660714" data-date-string="Dec 24, 2018" data-time-string="9:11 AM" title="Dec 24, 2018 at 9:11 AM">3 minutes ago</time></li>
+</ul>
+</div>
+<div class="contentRow-minor contentRow-minor--hideLinks">
+<a href="/forums/faction-recruitment/">Faction Recruitment</a>
+</div>
+</div>
+</div>
+</li>
+<li class="block-row">
+<div class="contentRow">
+<div class="contentRow-figure">
+<a href="/members/issyy_.2202/" class="avatar avatar--xxs" data-user-id="2202" data-xf-init="member-tooltip">
+<img src="/data/avatars/s/2/2202.jpg?1544320228" alt="Issyy_" class="avatar-u2202-s" />
+</a>
+</div>
+<div class="contentRow-main contentRow-main--close">
+<a href="/threads/lff-tareyy.3224/post-29836">-=!=- LFF // Tareyy -=!=-</a>
+<div class="contentRow-minor contentRow-minor--hideLinks">
+<ul class="listInline listInline--bullet">
+<li>Latest: Issyy_</li>
+<li><time class="u-dt" dir="auto" datetime="2018-12-24T08:59:17-0500" data-time="1545659957" data-date-string="Dec 24, 2018" data-time-string="8:59 AM" title="Dec 24, 2018 at 8:59 AM">16 minutes ago</time></li>
+</ul>
+</div>
+<div class="contentRow-minor contentRow-minor--hideLinks">
+<a href="/forums/faction-recruitment/">Faction Recruitment</a>
+</div>
+</div>
+</div>
+</li>
+<li class="block-row">
+<div class="contentRow">
+<div class="contentRow-figure">
+<a href="/members/blatantingg.3348/" class="avatar avatar--xxs" data-user-id="3348" data-xf-init="member-tooltip">
+<img src="/data/avatars/s/3/3348.jpg?1545496069" alt="blatantingg" class="avatar-u3348-s" />
+</a>
+</div>
+<div class="contentRow-main contentRow-main--close">
+<a href="/threads/group-lff.3251/post-29828">group lff</a>
+<div class="contentRow-minor contentRow-minor--hideLinks">
+<ul class="listInline listInline--bullet">
+<li>Latest: blatantingg</li>
+<li><time class="u-dt" dir="auto" datetime="2018-12-24T08:20:45-0500" data-time="1545657645" data-date-string="Dec 24, 2018" data-time-string="8:20 AM" title="Dec 24, 2018 at 8:20 AM">55 minutes ago</time></li>
+</ul>
+</div>
+<div class="contentRow-minor contentRow-minor--hideLinks">
+<a href="/forums/faction-recruitment/">Faction Recruitment</a>
+</div>
+</div>
+</div>
+</li>
+<li class="block-row">
+<div class="contentRow">
+<div class="contentRow-figure">
+<a href="/members/blatantingg.3348/" class="avatar avatar--xxs" data-user-id="3348" data-xf-init="member-tooltip">
+<img src="/data/avatars/s/3/3348.jpg?1545496069" alt="blatantingg" class="avatar-u3348-s" />
+</a>
+</div>
+<div class="contentRow-main contentRow-main--close">
+<a href="/threads/group-lff-rosamie-hilarious-saviour-next-okkjosh-7blocking-barhoomy.3257/post-29827">Group LFF (Rosamie, Hilarious, Saviour / Next, OkkJosh, 7Blocking &amp; Barhoomy)</a>
+<div class="contentRow-minor contentRow-minor--hideLinks">
+<ul class="listInline listInline--bullet">
+<li>Latest: blatantingg</li>
+<li><time class="u-dt" dir="auto" datetime="2018-12-24T08:20:09-0500" data-time="1545657609" data-date-string="Dec 24, 2018" data-time-string="8:20 AM" title="Dec 24, 2018 at 8:20 AM">55 minutes ago</time></li>
+</ul>
+</div>
+<div class="contentRow-minor contentRow-minor--hideLinks">
+<a href="/forums/faction-recruitment/">Faction Recruitment</a>
+</div>
+</div>
+</div>
+</li>
+<li class="block-row">
+<div class="contentRow">
+<div class="contentRow-figure">
+<a href="/members/zylif.982/" class="avatar avatar--xxs" data-user-id="982" data-xf-init="member-tooltip">
+<img src="/data/avatars/s/0/982.jpg?1536294374" alt="zylif" class="avatar-u982-s" />
+</a>
+</div>
+<div class="contentRow-main contentRow-main--close">
+<a href="/threads/tajay-lff-for-riot.3262/post-29823">Tajay LFF for Riot</a>
+<div class="contentRow-minor contentRow-minor--hideLinks">
+<ul class="listInline listInline--bullet">
+<li>Latest: zylif</li>
+<li><time class="u-dt" dir="auto" datetime="2018-12-24T07:58:29-0500" data-time="1545656309" data-date-string="Dec 24, 2018" data-time-string="7:58 AM" title="Dec 24, 2018 at 7:58 AM">Today at 7:58 AM</time></li>
+</ul>
+</div>
+<div class="contentRow-minor contentRow-minor--hideLinks">
+<a href="/forums/faction-recruitment/">Faction Recruitment</a>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="block">
+<iframe src="https://discordapp.com/widget?id=474515007691030528&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="p-footer" id="footer">
+<div class="p-footer-inner">
+<p>
+Copyright &copy; <b>Vorex Services</b> 2018. All Rights Reserved.<br />
+<small>We are not affiliated with Mojang AB.</small>
+</p>
+<a id="tm" href="https://nikolovdzn.com/"></a>
+</div>
+</footer>
+</div> 
+<div class="u-bottomFixer js-bottomFixTarget">
+</div>
+<div class="u-scrollButtons js-scrollButtons" data-trigger-type="up">
+<a href="#top" class="button--scroll button" data-xf-click="scroll-to"><span class="button-text"><i class="fa fa-arrow-up"></i></span></a>
+</div>
+<script src="/js/vendor/jquery/jquery-3.2.1.min.js?_v=bde24e90"></script>
+<script src="/js/vendor/vendor-compiled.js?_v=bde24e90"></script>
+<script src="/js/xf/core-compiled.js?_v=bde24e90"></script>
+<script src="/js/8wayrun/porta/infinite.js?_v=bde24e90"></script>
+<script src="/js/8wayrun/porta/portal.js?_v=bde24e90"></script>
+<script src="/js/xf/lightbox-compiled.js?_v=bde24e90"></script>
+<script>
+		jQuery.extend(true, XF.config, {
+			// 
+			userId: 0,
+			url: {
+				fullBase: 'https://www.vipermc.net/',
+				basePath: '/',
+				css: '/css.php?css=__SENTINEL__&s=10&l=1&d=1544829034',
+				keepAlive: '/login/keep-alive'
+			},
+			cookie: {
+				path: '/',
+				domain: '',
+				prefix: 'xf_',
+				secure: true
+			},
+			csrf: '1545660946,3ad3b57de907994e458a171c5d4e509b',
+			js: {"\/js\/8wayrun\/porta\/infinite.js?_v=bde24e90":true,"\/js\/8wayrun\/porta\/portal.js?_v=bde24e90":true,"\/js\/xf\/lightbox-compiled.js?_v=bde24e90":true},
+			css: {"public:EWRporta.less":true,"public:EWRporta_articles.less":true,"public:bb_code.less":true,"public:lightbox.less":true,"public:message.less":true,"public:extra.less":true},
+			time: {
+				now: 1545660946,
+				today: 1545627600,
+				todayDow: 1
+			},
+			borderSizeFeature: '3px',
+			enableRtnProtect: true,
+			enableFormSubmitSticky: true,
+			uploadMaxFilesize: 10485760,
+			visitorCounts: {
+				conversations_unread: '0',
+				alerts_unread: '0',
+				total_unread: '0',
+				title_count: true,
+				icon_indicator: true
+			},
+			jsState: {}
+		});
 
-		<div class="main-content">
-			<h2>About Us</h2>
-			<p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper mattis eros non ultricies. Nam hendrerit ligula eu felis laoreet venenatis. Pellentesque vulputate elementum pretium. Nullam at blandit magna, sit amet tincidunt metus. In hendrerit mauris id augue tristique gravida et at ante. Sed maximus lacus vel sem tristique, id luctus risus blandit.</p>
-		</div>
+		jQuery.extend(XF.phrases, {
+			// 
+			date_x_at_time_y: "{date} at {time}",
+			day_x_at_time_y:  "{day} at {time}",
+			yesterday_at_x:   "Yesterday at {time}",
+			x_minutes_ago:    "{minutes} minutes ago",
+			one_minute_ago:   "1 minute ago",
+			a_moment_ago:     "A moment ago",
+			today_at_x:       "Today at {time}",
+			in_a_moment:      "In a moment",
+			in_a_minute:      "In a minute",
+			in_x_minutes:     "In {minutes} minutes",
+			later_today_at_x: "Later today at {time}",
+			tomorrow_at_x:    "Tomorrow at {time}",
 
-		<div class="gradient">
-			<div class="flex-container">
-				<div class="split">
-					<a href="#"><img class="img" src="img/forums.png" alt="Image of Forums icon"></a>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a tincidunt lorem. Donec a mollis diam, posuere venenatis lorem. Vestibulum sit amet risus eros. Nam commodo tortor a nunc tempor, sit amet auctor purus elementum.</p>
-				</div>
-				<div class="split">
-					<a href="#"><img class="img" src="img/store.png" alt="Image of Store icon"></a>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a tincidunt lorem. Donec a mollis diam, posuere venenatis lorem. Vestibulum sit amet risus eros. Nam commodo tortor a nunc tempor, sit amet auctor purus elementum.</p>
-				</div>
-				<div class="split">
-					<a href="#vote-section"><img class="img" src="img/vote.png" alt="Image of Voting icon"></a>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a tincidunt lorem. Donec a mollis diam, posuere venenatis lorem. Vestibulum sit amet risus eros. Vote for us below!</p>
-				</div>
-			</div>
-		</div>
+			day0: "Sunday",
+			day1: "Monday",
+			day2: "Tuesday",
+			day3: "Wednesday",
+			day4: "Thursday",
+			day5: "Friday",
+			day6: "Saturday",
 
-		<div class="vote-section">
-			<h2>Vote For Us</h2>
-			<p>Please consider voting for MyServer using the links below! Not only does this benifit us massivly, but you also get rewards in-game.</p>
-			<div class="vote-container">
-				<div class="vote">
-					<h2>PlanetMinecraft.com</h2>
-					<a href="#"><button class="vote-btn">Vote Now</button></a>
-				</div>
-				<div class="vote">
-					<h2>MinecraftServers.org</h2>
-					<a href="#"><button class="vote-btn">Vote Now</button></a>
-				</div>
-				<div class="vote">
-					<h2>TopG.org</h2>
-					<a href="#"><button class="vote-btn">Vote Now</button></a>
-				</div>
-				<div class="vote">
-					<h2>Minecraft-MP.com</h2>
-					<a href="#"><button class="vote-btn">Vote Now</button></a>
-				</div>
-			</div>
-		</div>
+			dayShort0: "Sun",
+			dayShort1: "Mon",
+			dayShort2: "Tue",
+			dayShort3: "Wed",
+			dayShort4: "Thu",
+			dayShort5: "Fri",
+			dayShort6: "Sat",
 
-		<footer>
-			<p>Copyright &copy; MyServer 2017</p>
-			<!-- Remove this part below if you want! -->
-			<p style="padding-right: 30px;">Created <a href="https://bybilly.uk/" target="_blank">ByBilly</a></p>
-		</footer>
+			month0: "January",
+			month1: "February",
+			month2: "March",
+			month3: "April",
+			month4: "May",
+			month5: "June",
+			month6: "July",
+			month7: "August",
+			month8: "September",
+			month9: "October",
+			month10: "November",
+			month11: "December",
 
-	</div>
+			active_user_changed_reload_page: "The active user has changed. Reload the page for the latest version.",
+			server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+			oops_we_ran_into_some_problems: "Oops! We ran into some problems.",
+			oops_we_ran_into_some_problems_more_details_console: "Oops! We ran into some problems. Please try again later. More error details may be in the browser console.",
+			file_too_large_to_upload: "The file is too large to be uploaded.",
+			uploaded_file_is_too_large_for_server_to_process: "The uploaded file is too large for the server to process.",
+			files_being_uploaded_are_you_sure: "Files are still being uploaded. Are you sure you want to submit this form?",
+			attach: "Attach files",
+			rich_text_box: "Rich text box",
+			close: "Close",
 
-	<script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
-	<script src="js/main.js" type="text/javascript"></script>
+			showing_x_of_y_items: "Showing {count} of {total} items",
+			showing_all_items: "Showing all items",
+			no_items_to_display: "No items to display"
+		});
+	</script>
+<form style="display:none" hidden="hidden">
+<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+</form>
+<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"url": "https://www.vipermc.net/",
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://www.vipermc.net/search/search?keywords={search_keywords}",
+				"query-input": "required name=search_keywords"
+			}
+		}
+		</script>
+<script src="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Cookies.js/1.2.1/cookies.min.js"></script>
+<script>
+
+// click to copy
+new ClipboardJS('#top header .block.ip', {
+	text: () => ip
+}).on('success', e => {
+	swal(
+		'Server IP Copied',
+		'We hope to see you online soon!',
+		'success'
+	)
+});
+	
+// server playercount
+let ip = 'play.vipermc.net';
+$.get('https://mcapi.us/server/status?ip=' + ip, function(res){
+	if (res.status !== 'success') return null;
+	$('#ndzn_playercount').html(res.players.now + ' playing now');
+});
+
+// discord count
+$.get('https://discordapp.com/api/guilds/474515007691030528/embed.json', function(d){
+	$('#ndzn-discord-count').html(d['members'].length + ' members online.');
+});
+	
+// mobile nav procedures
+let $nav = $('#top header .header-nav .block.nav');
+let $close = $('#top header .header-nav .nav-header .nav-close');
+let $toggle = $('#top header .header-nav .block.navToggle');
+let $curtain = $('#ndzn-curtain');
+function openNav() {
+	$nav.addClass('visible');
+	$curtain.addClass('visible');
+}
+function closeNav() {
+	$nav.removeClass('visible');
+	$curtain.removeClass('visible');
+}
+
+// mobile nav logic
+$toggle.click(function(){
+	let plsClose = $nav.hasClass('visible') || true;
+	eval((plsClose ? 'open' : 'close') + 'Nav()');
+});
+$curtain.click(function(){
+	closeNav();
+});
+$close.click(function(){
+	closeNav();
+});
+
+$(function(){
+	if (NDZN_ACTIVE_PAGE) {
+		$('#top>header .header-nav .block.nav a:nth-of-type('+NDZN_ACTIVE_PAGE+')').addClass('active');
+	}
+});
+
+</script>
 </body>
 </html>
